@@ -1,24 +1,29 @@
-# Project
+# City-Building Projects
 
-A collection of simple HTML pages showcasing different city-building concepts and simulations.
+A collection of interactive city-building pages.
 
 ## Pages
 
+- [Home](index.html)
 - [Burgus](burgus.html)
 - [Colonia](colonia.html)
 - [SimCity](simcity.html)
 
 ## GitHub Pages
 
-You can access the pages directly through GitHub Pages:
+Visit the site:
 
-- `https://<username>.github.io/<repository>/burgus.html`
-- `https://<username>.github.io/<repository>/colonia.html`
-- `https://<username>.github.io/<repository>/simcity.html`
+https://ericsoau-alt.github.io/simcity/
 
-## Getting Started
+You can also open each project directly:
 
-Simply open any of the HTML files in a web browser, or visit the links above after enabling GitHub Pages in the repository settings.
+- https://ericsoau-alt.github.io/simcity/burgus.html
+- https://ericsoau-alt.github.io/simcity/colonia.html
+- https://ericsoau-alt.github.io/simcity/simcity.html
+
+## Running Locally
+
+Open `index.html` in a web browser, or serve the repository using a local web server.
 
 ## License
 
