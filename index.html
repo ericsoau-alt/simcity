@@ -1,94 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#090b12">
-  <title>SimCity — Worlds</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--bg:#090b12;--ink:#f2f3f7;--muted:#8b91a2;--line:rgba(255,255,255,.12);--cyan:#72e3e8;--violet:#a99aff}
-    *{box-sizing:border-box}
-    html{min-height:100%;background:var(--bg)}
-    body{margin:0;min-height:100vh;color:var(--ink);font-family:"Space Grotesk",sans-serif;background:radial-gradient(ellipse at 16% 8%,rgba(73,116,160,.18),transparent 34%),radial-gradient(ellipse at 90% 82%,rgba(111,79,156,.17),transparent 35%),var(--bg);overflow-x:hidden}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
-    .shell{width:min(1180px,calc(100% - 48px));margin:0 auto;position:relative}
-    header{height:94px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-    .mark{width:28px;height:28px;border:1px solid rgba(114,227,232,.65);display:grid;place-items:center;transform:rotate(45deg);border-radius:6px}
-    .mark span{width:8px;height:8px;background:var(--cyan);border-radius:1px;box-shadow:0 0 18px var(--cyan)}
-    .edition{font:11px "DM Mono",monospace;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
-    main{padding:86px 0 74px}
-    .eyebrow{font:11px "DM Mono",monospace;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase;display:flex;align-items:center;gap:12px}
-    .eyebrow:before{content:"";height:1px;width:34px;background:var(--cyan)}
-    h1{font-size:clamp(54px,9vw,112px);line-height:.91;letter-spacing:-.075em;margin:24px 0 54px;font-weight:600}
-    h1 span{color:transparent;-webkit-text-stroke:1px rgba(242,243,247,.65)}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .project{--accent:var(--cyan);position:relative;min-height:320px;padding:25px 24px 22px;overflow:hidden;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:5px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));transition:transform .35s ease,border-color .35s ease,background .35s ease;isolation:isolate}
-    .project:nth-child(2){--accent:#b7a0ff}.project:nth-child(3){--accent:#e7bd86}
-    .project:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 45%,color-mix(in srgb,var(--accent) 19%,transparent),transparent 54%);opacity:.7;z-index:-1;transition:opacity .35s ease}
-    .project:hover{transform:translateY(-7px);border-color:color-mix(in srgb,var(--accent) 65%,white 5%);background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.025))}
-    .project:hover:before{opacity:1}
-    .topline{display:flex;justify-content:space-between;align-items:center;font:10px "DM Mono",monospace;color:var(--muted);letter-spacing:.13em}
-    .number{color:var(--accent)}
-    .art{height:168px;margin:18px -5px 12px;position:relative;display:grid;place-items:center}
-    .orb{position:absolute;width:138px;height:138px;border:1px solid color-mix(in srgb,var(--accent) 56%,transparent);border-radius:50%;box-shadow:0 0 55px color-mix(in srgb,var(--accent) 15%,transparent),inset 0 0 35px color-mix(in srgb,var(--accent) 10%,transparent)}
-    .orb:before,.orb:after{content:"";position:absolute;inset:13px;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-radius:50%;transform:scaleX(.55) rotate(45deg)}
-    .orb:after{transform:scaleX(.55) rotate(-45deg)}
-    .geometry{position:relative;width:104px;height:76px;display:flex;align-items:end;justify-content:center;gap:5px;filter:drop-shadow(0 0 12px color-mix(in srgb,var(--accent) 35%,transparent))}
-    .tower{width:19px;border:1px solid color-mix(in srgb,var(--accent) 70%,white 8%);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 25%,transparent),rgba(7,10,18,.5));position:relative}
-    .tower:after{content:"";position:absolute;inset:8px 5px;background:repeating-linear-gradient(to bottom,color-mix(in srgb,var(--accent) 80%,transparent) 0 2px,transparent 2px 9px);opacity:.65}
-    .tower:nth-child(1){height:34px}.tower:nth-child(2){height:57px;width:23px}.tower:nth-child(3){height:43px}.tower:nth-child(4){height:69px;width:17px}.tower:nth-child(5){height:29px}
-    .project:nth-child(2) .geometry{transform:scale(.9) rotate(-8deg)}
-    .project:nth-child(2) .tower{clip-path:polygon(0 12%,50% 0,100% 12%,100% 100%,0 100%)}
-    .project:nth-child(3) .orb{border-radius:42% 58% 55% 45%;transform:rotate(25deg) scale(1.08)}
-    .project:nth-child(3) .geometry{transform:scale(1.08)}
-    .project:nth-child(3) .tower{border-radius:2px 2px 0 0}
-    .project h2{font-size:27px;letter-spacing:-.045em;margin:10px 0 0;font-weight:500}
-    .bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
-    .open{font:10px "DM Mono",monospace;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
-    .arrow{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--accent);font-size:18px;transition:transform .3s,border-color .3s}
-    .project:hover .arrow{transform:translate(3px,-3px);border-color:var(--accent)}
-    footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:22px 0 28px;color:#737a8b;font:10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
-    .status{display:flex;align-items:center;gap:9px}.status:before{content:"";width:6px;height:6px;border-radius:50%;background:#79d9ae;box-shadow:0 0 10px #79d9ae}
-    @media(max-width:800px){main{padding:66px 0 58px}.grid{grid-template-columns:1fr;gap:13px}.project{min-height:250px;display:grid;grid-template-columns:1fr 145px;grid-template-rows:auto 1fr auto;column-gap:8px;padding:22px}.topline{grid-column:1/-1}.art{grid-column:2;grid-row:2/4;height:135px;margin:0;align-self:center}.orb{width:112px;height:112px}.geometry{transform:scale(.78)}.project:nth-child(2) .geometry{transform:scale(.72) rotate(-8deg)}.project:nth-child(3) .geometry{transform:scale(.85)}.project h2{grid-column:1;grid-row:2;align-self:end;font-size:25px}.bottom{grid-column:1;grid-row:3;align-self:end;margin-top:8px}.project{min-height:205px}}
-    @media(max-width:460px){.shell{width:min(100% - 32px,1180px)}header{height:76px}.edition{font-size:9px}main{padding-top:55px}h1{margin-bottom:38px}.project{grid-template-columns:1fr 110px;padding:18px;min-height:184px}.art{height:120px}.orb{width:96px;height:96px}.geometry{transform:scale(.68)}.project:nth-child(2) .geometry{transform:scale(.63) rotate(-8deg)}.project:nth-child(3) .geometry{transform:scale(.72)}.project h2{font-size:22px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#11120f">
+<title>SimCity — Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#11120f;--panel:#191a16;--ink:#e9e6dc;--muted:#89877d;--line:#383930;--accent:#c5a878}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -25%,#34352a 0,transparent 55%),var(--bg);color:var(--ink);font-family:Manrope, sans-serif}
+.shell{width:min(1240px,calc(100% - 64px));margin:auto}header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:13px;font-weight:800;letter-spacing:.2em}.brand span{color:var(--accent)}.meta,.eyebrow,.index,.launch,footer{font:10px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+main{padding:100px 0 92px}.eyebrow{color:var(--accent);display:flex;align-items:center;gap:14px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}
+h1{font-size:clamp(48px,8vw,100px);line-height:.98;letter-spacing:-.075em;font-weight:500;margin:26px 0 70px;max-width:850px}
+h1 span{font-weight:800;color:var(--accent)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.project{position:relative;display:flex;flex-direction:column;min-height:370px;padding:20px 21px 19px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:border-color .3s,transform .3s,background .3s}
+.project:hover{transform:translateY(-4px);border-color:#a58c64;background:#20211b}
+.index{display:flex;justify-content:space-between}.index b{color:var(--accent);font-weight:400}
+.visual{height:220px;margin:24px -21px 20px;position:relative;overflow:hidden;background:#20221c}
+.visual:before{content:"";position:absolute;inset:-40%;opacity:.75;background:repeating-radial-gradient(ellipse at 50% 50%,transparent 0 19px,rgba(197,168,120,.22) 20px 21px,transparent 22px 39px);transform:rotate(-18deg) scale(1.2)}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgba(197,168,120,.18) 50%,transparent 50.2%),linear-gradient(0deg,transparent 49.8%,rgba(197,168,120,.18) 50%,transparent 50.2%);background-size:62px 62px;opacity:.45}
+.visual svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.project:nth-child(2) .visual{background:#20221f}.project:nth-child(2) .visual:before{transform:rotate(31deg) scale(1.4);background:repeating-linear-gradient(0deg,transparent 0 17px,rgba(197,168,120,.18) 18px 19px,transparent 20px 38px)}
+.project:nth-child(3) .visual{background:#22211c}.project:nth-child(3) .visual:before{transform:rotate(-40deg) scale(1.5);background:repeating-radial-gradient(ellipse at 20% 70%,transparent 0 15px,rgba(197,168,120,.2) 16px 17px,transparent 18px 33px)}
+.project h2{font-size:29px;letter-spacing:-.055em;font-weight:600;margin:0}
+.bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:17px;border-top:1px solid var(--line)}
+.launch{color:var(--accent)}.arrow{font-size:20px;color:var(--accent);transition:transform .25s}.project:hover .arrow{transform:translate(3px,-3px)}
+footer{border-top:1px solid var(--line);padding:23px 0 30px;display:flex;justify-content:space-between;gap:16px}
+@media(max-width:850px){main{padding:72px 0}.projects{grid-template-columns:1fr}.project{min-height:280px;display:grid;grid-template-columns:1fr 42%;grid-template-rows:auto 1fr auto;column-gap:20px}.index{grid-column:1/-1}.visual{grid-column:2;grid-row:2/4;height:180px;margin:18px -21px 0 0}.project h2{grid-column:1;grid-row:2;align-self:end}.bottom{grid-column:1;grid-row:3}}
+@media(max-width:520px){.shell{width:calc(100% - 36px)}header{height:72px}.meta{font-size:8px}main{padding:58px 0}h1{margin-bottom:42px}.project{min-height:235px;grid-template-columns:1fr 38%;column-gap:10px}.visual{height:150px}.project h2{font-size:24px}footer{font-size:8px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
 </head>
-<body>
-  <div class="shell">
-    <header>
-      <div class="brand"><div class="mark"><span></span></div> SIMCITY</div>
-      <div class="edition">DIGITAL WORLDS&nbsp; / &nbsp;01—03</div>
-    </header>
-    <main>
-      <div class="eyebrow">Select a world</div>
-      <h1>BUILT TO<br><span>EXPLORE.</span></h1>
-      <nav class="grid" aria-label="Projects">
-        <a class="project" href="./simcity.html">
-          <div class="topline"><span class="number">01</span><span>WORLD / 001</span></div>
-          <div class="art" aria-hidden="true"><div class="orb"></div><div class="geometry"><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i></div></div>
-          <h2>SimCity</h2>
-          <div class="bottom"><span class="open">Enter</span><span class="arrow">↗</span></div>
-        </a>
-        <a class="project" href="./burgus.html">
-          <div class="topline"><span class="number">02</span><span>WORLD / 002</span></div>
-          <div class="art" aria-hidden="true"><div class="orb"></div><div class="geometry"><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i></div></div>
-          <h2>Burgus</h2>
-          <div class="bottom"><span class="open">Enter</span><span class="arrow">↗</span></div>
-        </a>
-        <a class="project" href="./colonia.html">
-          <div class="topline"><span class="number">03</span><span>WORLD / 003</span></div>
-          <div class="art" aria-hidden="true"><div class="orb"></div><div class="geometry"><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i><i class="tower"></i></div></div>
-          <h2>Colonia</h2>
-          <div class="bottom"><span class="open">Enter</span><span class="arrow">↗</span></div>
-        </a>
-      </nav>
-    </main>
-    <footer><span>SIMCITY PROJECTS</span><span class="status">ALL SYSTEMS READY</span><span>© 2026</span></footer>
-  </div>
-</body>
-</html>
+<body><div class="shell">
+<header><div class="brand">SIM<span>/</span>CITY</div><div class="meta">STRATEGY &amp; SIMULATION&nbsp;&nbsp; / &nbsp;&nbsp;COLLECTION 01</div></header>
+<main><div class="eyebrow">The collection</div><h1>Worlds shaped<br>by <span>decisions.</span></h1>
+<nav class="projects" aria-label="Games">
+<a class="project" href="./simcity.html"><div class="index"><b>01</b><span>SIMULATION</span></div><div class="visual" aria-hidden="true"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#c5a878" stroke-width="1.1" opacity=".75"><path d="M-20 165 L80 90 150 130 235 45 420 110"/><path d="M-20 185 L80 110 150 150 235 65 420 130"/><path d="M-20 205 L80 130 150 170 235 85 420 150"/><path d="M80 90V210M150 130V220M235 45V190M310 75V220"/></g><g fill="#c5a878" opacity=".6"><rect x="96" y="88" width="28" height="42"/><rect x="165" y="110" width="24" height="58"/><rect x="250" y="54" width="34" height="72"/><rect x="300" y="105" width="22" height="47"/></g></svg></div><h2>SimCity</h2><div class="bottom"><span class="launch">Launch project</span><span class="arrow">↗</span></div></a>
+<a class="project" href="./burgus.html"><div class="index"><b>02</b><span>EMPIRE BUILDING</span></div><div class="visual" aria-hidden="true"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#c5a878" stroke-width="1.2" opacity=".72"><path d="M25 190V105L200 25 375 105V190M55 190V120L200 55 345 120V190M90 190V135L200 85 310 135V190"/><path d="M25 105H375M55 120H345M90 135H310M25 190H375"/></g><g fill="#c5a878" opacity=".55"><path d="M180 190V78H220V190Z"/><path d="M160 85L200 45 240 85Z"/><rect x="70" y="140" width="22" height="50"/><rect x="308" y="140" width="22" height="50"/></g></svg></div><h2>Burgus</h2><div class="bottom"><span class="launch">Launch project</span><span class="arrow">↗</span></div></a>
+<a class="project" href="./colonia.html"><div class="index"><b>03</b><span>COLONIAL DEVELOPMENT</span></div><div class="visual" aria-hidden="true"><svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#c5a878" stroke-width="1.1" opacity=".7"><path d="M-20 50L420 50M-20 90L420 90M-20 130L420 130M-20 170L420 170M55 -10V230M115 -10V230M175 -10V230M235 -10V230M295 -10V230M355 -10V230"/><path d="M-20 210L420 10M-20 170L340 0M60 230L420 30"/></g><g fill="#c5a878" opacity=".5"><rect x="80" y="55" width="30" height="25"/><rect x="140" y="95" width="30" height="25"/><rect x="260" y="135" width="30" height="25"/><rect x="320" y="55" width="30" height="25"/></g></svg></div><h2>Colonia</h2><div class="bottom"><span class="launch">Launch project</span><span class="arrow">↗</span></div></a>
+</nav></main>
+<footer><span>SIM/CITY PROJECTS</span><span>THREE WORLDS&nbsp; · &nbsp;ONE COLLECTION</span><span>© 2026</span></footer>
+</div></body></html>
