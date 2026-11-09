@@ -1,29 +1,36 @@
-# City-Building Projects
+# SIM/CITY — Strategy & City-Building Games
 
-A collection of interactive city-building pages.
+A collection of interactive strategy, city-building and world-development games.
 
-## Pages
+## Games
 
-- [Home](index.html)
-- [Burgus](burgus.html)
-- [Colonia](colonia.html)
-- [SimCity](simcity.html)
+- **[SimCity](simcity.html)** — Modern city building and urban management.
+- **[Burgus](burgus.html)** — Roman-era town building and development.
+- **[Colonia](colonia.html)** — Space colonization and settlement management.
+- **[Realmforge](realmforge.html)** — Fantasy-themed kingdom building and strategy.
 
-## GitHub Pages
+## Play Online
 
-Visit the site:
+**[Open SIM/CITY](https://ericsoau-alt.github.io/simcity/)**
 
-https://ericsoau-alt.github.io/simcity/
+Direct game links:
 
-You can also open each project directly:
+- [SimCity](https://ericsoau-alt.github.io/simcity/simcity.html)
+- [Burgus](https://ericsoau-alt.github.io/simcity/burgus.html)
+- [Colonia](https://ericsoau-alt.github.io/simcity/colonia.html)
+- [Realmforge](https://ericsoau-alt.github.io/simcity/realmforge.html)
 
-- https://ericsoau-alt.github.io/simcity/burgus.html
-- https://ericsoau-alt.github.io/simcity/colonia.html
-- https://ericsoau-alt.github.io/simcity/simcity.html
+## Run Locally
 
-## Running Locally
+Clone or download this repository, then open `index.html` in a browser. For the best experience, run it through a local web server.
 
-Open `index.html` in a web browser, or serve the repository using a local web server.
+## Repository Contents
+
+- `index.html` — Game selection landing page
+- `simcity.html` — Modern city-building game
+- `burgus.html` — Roman town-building game
+- `colonia.html` — Space colonization game
+- `realmforge.html` — Fantasy strategy game
 
 ## License
 
