@@ -3,124 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10120f">
-<title>SIM/CITY — Choose Your World</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#e9e6dc">
+<title>SimCity — Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--ink:#f1eee5;--muted:#a8a99f;--gold:#d0b477;--line:rgba(231,220,190,.22)}
 *{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:#10120f;color:var(--ink)}
-body{font-family:Manrope,Arial,sans-serif;min-height:100vh;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,rgba(113,105,78,.2),transparent 48%),linear-gradient(180deg,#151812 0%,#10120f 70%);z-index:0}
-.shell{position:relative;z-index:1;width:min(1500px,calc(100% - 72px));margin:auto}
-header{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.logo{font-family:Cinzel,serif;font-size:19px;font-weight:700;letter-spacing:.17em}.logo span{color:var(--gold)}
-.header-right{font-size:10px;letter-spacing:.23em;color:#a9a99d;text-transform:uppercase}
-main{padding:clamp(44px,7vh,82px) 0 72px}
-.intro{text-align:center;margin-bottom:42px}
-.kicker{font-size:10px;letter-spacing:.36em;color:var(--gold);text-transform:uppercase}
-h1{font-family:Cinzel,Georgia,serif;font-weight:500;font-size:clamp(27px,4vw,46px);letter-spacing:.12em;text-transform:uppercase;margin:17px 0 0}
-.rule{width:70px;height:1px;background:var(--gold);margin:22px auto 0;opacity:.75}
-.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.game{position:relative;display:block;min-height:clamp(390px,54vw,610px);overflow:hidden;color:var(--ink);text-decoration:none;border:1px solid rgba(220,210,180,.22);background:#242923;isolation:isolate}
-.art{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#26332f}
-.art svg{width:100%;height:100%;display:block}
-.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,8,.08) 0%,rgba(6,9,8,.03) 35%,rgba(6,9,8,.48) 68%,rgba(6,9,8,.96) 100%),linear-gradient(90deg,rgba(7,9,8,.16),transparent 55%,rgba(7,9,8,.12))}
-.game:before{content:"";position:absolute;inset:10px;border:1px solid rgba(242,225,184,.0);transition:inset .45s,border-color .45s;pointer-events:none;z-index:2}
-.game:hover:before{inset:17px;border-color:rgba(242,225,184,.55)}
-.game:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,10,8,.14) 55%,rgba(8,10,8,.76) 100%);opacity:.85;transition:opacity .35s;z-index:-1}
-.game:hover:after{opacity:1}
-.number{position:absolute;top:24px;left:25px;font:11px Manrope,sans-serif;letter-spacing:.22em;color:rgba(255,255,255,.75)}
-.game-info{position:absolute;left:30px;right:30px;bottom:30px}
-.genre{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#ddc994;margin-bottom:12px}
-h2{font-family:Cinzel,Georgia,serif;font-size:clamp(27px,3.3vw,43px);font-weight:600;letter-spacing:.06em;margin:0 0 20px;text-shadow:0 2px 18px rgba(0,0,0,.5)}
-.launch{display:flex;align-items:center;gap:13px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#eee8d8}
-.launch:before{content:"";width:30px;height:1px;background:var(--gold);transition:width .3s}
-.launch:after{content:"↗";font-size:17px;color:var(--gold);margin-left:auto;transition:transform .3s}
-.game:hover .launch:before{width:52px}.game:hover .launch:after{transform:translate(4px,-3px)}
-footer{display:flex;justify-content:space-between;gap:20px;padding:22px 0 28px;border-top:1px solid var(--line);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#77796f}
-@media(max-width:900px){.shell{width:min(720px,calc(100% - 40px))}.games{grid-template-columns:1fr}.game{min-height:430px}.game-info{left:28px;right:28px;bottom:27px}h2{font-size:38px}main{padding-top:48px}}
-@media(max-width:520px){.shell{width:calc(100% - 28px)}header{height:68px}.logo{font-size:15px}.header-right{font-size:8px;letter-spacing:.12em}.game{min-height:390px}.intro{margin-bottom:28px}footer{font-size:8px;flex-wrap:wrap}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+body{margin:0;background:#e9e6dc;color:#252923;font-family:Manrope,Arial,sans-serif}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+header{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:17px;font-weight:800;letter-spacing:.13em}.logo span{color:#6b8060}
+header small{font-size:10px;letter-spacing:.15em;color:#73786d}
+.hero{height:clamp(250px,34vw,390px);position:relative;overflow:hidden;background:#9db9b2}
+.hero svg{width:100%;height:100%;display:block}
+.hero:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(20,35,31,.55))}
+.hero-title{position:absolute;z-index:1;left:clamp(22px,5vw,58px);bottom:30px;color:white;text-shadow:0 2px 10px #26332d}
+.hero-title small{font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.hero-title h1{font-size:clamp(27px,4vw,44px);font-weight:700;margin:7px 0 0;letter-spacing:-.04em}
+main{padding:34px 0 58px}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.section-head h2{font-size:17px;margin:0;font-weight:700}
+.section-head span{font-size:10px;color:#74796f;letter-spacing:.12em}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.game{display:block;background:#f7f6f1;color:inherit;text-decoration:none;border:1px solid #d3d1c7;transition:transform .18s,border-color .18s}
+.game:hover{transform:translateY(-3px);border-color:#8b9a7e}
+.thumb{height:150px;overflow:hidden;background:#aab8a1}
+.thumb svg{display:block;width:100%;height:100%}
+.game-info{display:flex;align-items:center;justify-content:space-between;padding:15px 17px}
+.game h3{font-size:18px;margin:0;font-weight:700}
+.arrow{font-size:20px;color:#718468}
+footer{padding:17px 0 25px;border-top:1px solid #d0cec3;color:#777b72;font-size:10px;letter-spacing:.1em}
+@media(max-width:720px){.games{grid-template-columns:1fr}.thumb{height:190px}.hero{height:260px}header small{font-size:8px}}
 </style>
 </head>
 <body>
-<div class="shell">
-<header><div class="logo">SIM<span>/</span>CITY</div><div class="header-right">Strategy · Simulation · World Building</div></header>
+<div class="wrap">
+<header><div class="logo">SIM<span>/</span>CITY</div><small>STRATEGY &amp; CITY BUILDING GAMES</small></header>
+<section class="hero" aria-label="Illustrated city landscape">
+<svg viewBox="0 0 1200 390" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A city beside a winding river">
+<rect width="1200" height="390" fill="#a9c6c1"/>
+<path d="M0 0H1200V145Q1000 110 850 150T550 140T250 150T0 120Z" fill="#d4d9bd"/>
+<path d="M0 175Q190 135 350 170T690 150T1000 175T1200 140V390H0Z" fill="#7f9e79"/>
+<path d="M0 260Q210 220 360 260T700 235T1000 250T1200 215V390H0Z" fill="#65865f"/>
+<path d="M0 245C190 220 250 300 440 275S700 185 800 225 990 330 1200 260V390H0Z" fill="#4f9aaf"/>
+<path d="M0 245C190 220 250 300 440 275S700 185 800 225 990 330 1200 260" fill="none" stroke="#d9e5d7" stroke-width="7" opacity=".8"/>
+<g fill="#d9d5c6" stroke="#9d9b8d" stroke-width="2">
+<path d="M40 220V120H95V220Z"/><path d="M35 120L68 90 100 120Z"/><path d="M105 225V80H160V225Z"/><path d="M100 80L132 48 165 80Z"/><path d="M175 235V145H230V235Z"/><path d="M170 145L202 115 235 145Z"/>
+<path d="M870 210V125H930V210Z"/><path d="M860 125L900 95 940 125Z"/><path d="M950 220V150H1015V220Z"/><path d="M940 150L982 118 1025 150Z"/><path d="M1040 225V115H1105V225Z"/><path d="M1030 115L1072 82 1115 115Z"/>
+</g>
+<g fill="#6d7774"><rect x="255" y="90" width="52" height="150"/><rect x="315" y="55" width="65" height="190"/><rect x="390" y="115" width="48" height="125"/><rect x="450" y="75" width="60" height="170"/><rect x="520" y="130" width="48" height="110"/></g>
+<g fill="#e7d6a4"><path d="M270 110h8v12h-8zm18 0h8v12h-8zm45-35h8v13h-8zm20 0h8v13h-8zm-75 55h8v12h-8zm45-25h8v12h-8zM465 95h8v12h-8zm20 0h8v12h-8z"/></g>
+<path d="M0 300L1200 300" stroke="#d9d1b9" stroke-width="12" opacity=".8"/>
+<path d="M0 295L1200 295" stroke="#7b8275" stroke-width="2"/>
+<g fill="#d8d1bc"><rect x="650" y="208" width="260" height="9" rx="3"/><rect x="665" y="190" width="8" height="35"/><rect x="885" y="190" width="8" height="35"/></g>
+<path d="M670 190L680 145M890 190L880 145" stroke="#d8d1bc" stroke-width="5"/>
+</svg>
+<div class="hero-title"><small>Build · Manage · Explore</small><h1>Choose your next world</h1></div>
+</section>
 <main>
-  <div class="intro"><div class="kicker">Choose your world</div><h1>Enter the simulation</h1><div class="rule"></div></div>
-  <nav class="games" aria-label="Choose a game">
-    <a class="game" href="./simcity.html" aria-label="Play SimCity">
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 700 1000" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="sky1" x2="0" y2="1"><stop stop-color="#172d3a"/><stop offset=".55" stop-color="#71818a"/><stop offset="1" stop-color="#d2a978"/></linearGradient>
-            <linearGradient id="water1" x2="0" y2="1"><stop stop-color="#5d797b"/><stop offset="1" stop-color="#172d32"/></linearGradient>
-            <linearGradient id="tower1" x2="1" y2="0"><stop stop-color="#26383b"/><stop offset=".5" stop-color="#71817c"/><stop offset="1" stop-color="#263239"/></linearGradient>
-          </defs>
-          <rect width="700" height="1000" fill="url(#sky1)"/><circle cx="520" cy="235" r="100" fill="#e8c99b" opacity=".38"/>
-          <path d="M0 475L110 380 180 440 270 300 350 420 455 330 560 440 700 350V650H0Z" fill="#344b4d" opacity=".7"/>
-          <path d="M0 570L100 510 190 550 300 455 400 535 520 465 700 540V750H0Z" fill="#263b3d"/>
-          <path d="M0 710L700 620V1000H0Z" fill="url(#water1)"/>
-          <g fill="url(#tower1)" stroke="#9da99a" stroke-opacity=".35">
-            <path d="M60 630V410H145V630Z"/><path d="M155 650V330H240V650Z"/><path d="M255 650V455H330V650Z"/><path d="M355 650V270H455V650Z"/><path d="M470 650V390H550V650Z"/><path d="M565 650V475H655V650Z"/>
-            <path d="M175 330L197 270 220 330Z"/><path d="M378 270L405 195 432 270Z"/>
-          </g>
-          <g fill="#e7c58e" opacity=".65">
-            <path d="M174 365h8v16h-8zm22 0h8v16h-8zm22 0h8v16h-8zM375 315h9v19h-9zm25 0h9v19h-9zm25 0h9v19h-9zM80 455h9v17h-9zm27 0h9v17h-9zM490 425h8v16h-8zm25 0h8v16h-8z"/>
-          </g>
-          <path d="M0 790Q160 735 350 790T700 770" fill="none" stroke="#d7c29a" stroke-opacity=".38" stroke-width="3"/>
-          <path d="M0 850Q170 800 350 850T700 830" fill="none" stroke="#d7c29a" stroke-opacity=".22" stroke-width="2"/>
-        </svg>
-      </div>
-      <span class="number">01 / CITY</span><div class="game-info"><div class="genre">Urban development</div><h2>SimCity</h2><div class="launch">Play now</div></div>
-    </a>
-    <a class="game" href="./burgus.html" aria-label="Play Burgus">
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 700 1000" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="sky2" x2="0" y2="1"><stop stop-color="#1b2830"/><stop offset=".56" stop-color="#66746c"/><stop offset="1" stop-color="#c29a69"/></linearGradient><linearGradient id="stone2" x2="1" y2="0"><stop stop-color="#49483c"/><stop offset=".5" stop-color="#a49a7b"/><stop offset="1" stop-color="#4c4a3e"/></linearGradient></defs>
-          <rect width="700" height="1000" fill="url(#sky2)"/><circle cx="180" cy="230" r="90" fill="#d9c59a" opacity=".2"/>
-          <path d="M0 500L110 355 200 460 320 290 430 440 560 310 700 450V760H0Z" fill="#36463d"/>
-          <path d="M0 620L120 480 220 590 350 425 500 570 610 455 700 550V850H0Z" fill="#27382f"/>
-          <path d="M0 720L700 660V1000H0Z" fill="#1d2b25"/>
-          <g fill="url(#stone2)" stroke="#d0bd91" stroke-opacity=".35" stroke-width="3">
-            <path d="M90 590V430H170V590Z"/><path d="M75 430L130 365 185 430Z"/><path d="M530 600V405H620V600Z"/><path d="M515 405L575 330 635 405Z"/>
-            <path d="M175 670V500H525V670Z"/><path d="M155 500L350 365 545 500Z"/><path d="M300 500V300H400V500Z"/><path d="M285 300L350 215 415 300Z"/>
-          </g>
-          <g fill="#202720"><path d="M112 500h35v90h-35zm440-20h40v120h-40zM320 540h60v130h-60z"/></g>
-          <g fill="#d5b16e" opacity=".72"><rect x="205" y="540" width="22" height="30"/><rect x="250" y="540" width="22" height="30"/><rect x="430" y="540" width="22" height="30"/><rect x="475" y="540" width="22" height="30"/><rect x="335" y="340" width="30" height="48"/></g>
-          <path d="M0 825Q180 740 350 810T700 780V1000H0Z" fill="#17231e"/>
-          <g fill="#111b18"><path d="M20 840l35-145 35 145zm80 0l28-110 28 110zm440 0l40-165 40 165zm75 0l25-105 25 105z"/></g>
-        </svg>
-      </div>
-      <span class="number">02 / KINGDOM</span><div class="game-info"><div class="genre">Medieval settlement</div><h2>Burgus</h2><div class="launch">Play now</div></div>
-    </a>
-    <a class="game" href="./colonia.html" aria-label="Play Colonia">
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 700 1000" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="sky3" x2="0" y2="1"><stop stop-color="#24434c"/><stop offset=".55" stop-color="#8ba49a"/><stop offset="1" stop-color="#d5b17b"/></linearGradient><linearGradient id="sea3" x2="0" y2="1"><stop stop-color="#4d7778"/><stop offset="1" stop-color="#1b373b"/></linearGradient></defs>
-          <rect width="700" height="1000" fill="url(#sky3)"/><circle cx="510" cy="245" r="95" fill="#f0d4a0" opacity=".42"/>
-          <path d="M0 540Q140 450 270 520T530 480T700 500V800H0Z" fill="#536b54"/>
-          <path d="M0 640Q180 570 330 630T700 590V1000H0Z" fill="url(#sea3)"/>
-          <path d="M0 770Q180 730 360 770T700 750" fill="none" stroke="#c8c4a2" stroke-opacity=".35" stroke-width="3"/>
-          <g fill="#d4c09a" stroke="#5c5d4c" stroke-width="3">
-            <path d="M70 610V460H180V610Z"/><path d="M55 460L125 390 195 460Z"/><path d="M205 640V500H320V640Z"/><path d="M190 500L262 420 335 500Z"/>
-            <path d="M390 620V435H510V620Z"/><path d="M375 435L450 350 525 435Z"/><path d="M535 650V510H640V650Z"/><path d="M520 510L588 435 655 510Z"/>
-          </g>
-          <g fill="#4a4436"><rect x="112" y="500" width="28" height="110"/><rect x="245" y="545" width="27" height="95"/><rect x="430" y="480" width="35" height="140"/><rect x="570" y="550" width="32" height="100"/></g>
-          <g stroke="#d7c7a4" stroke-width="7" fill="none" opacity=".8"><path d="M0 710L700 665"/><path d="M0 745L700 700"/><path d="M0 780L700 735"/></g>
-          <path d="M0 860Q130 825 250 855T500 850T700 830V1000H0Z" fill="#172e32"/>
-          <g fill="#182d28"><path d="M15 690l45-175 45 175zm580 0l40-160 40 160z"/></g>
-          <path d="M310 640L350 520 390 640" fill="none" stroke="#e4d1a8" stroke-width="5" opacity=".65"/>
-        </svg>
-      </div>
-      <span class="number">03 / FRONTIER</span><div class="game-info"><div class="genre">Colonial expansion</div><h2>Colonia</h2><div class="launch">Play now</div></div>
-    </a>
-  </nav>
+<div class="section-head"><h2>Games</h2><span>SELECT A GAME TO PLAY</span></div>
+<nav class="games" aria-label="Games">
+<a class="game" href="./simcity.html"><div class="thumb"><svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#9abbb5"/><path d="M0 100Q120 65 230 100T400 85V150H0Z" fill="#5d9aaf"/><path d="M0 92H400" stroke="#ddd8c4" stroke-width="8"/><g fill="#7c8d88"><rect x="35" y="35" width="38" height="60"/><rect x="83" y="15" width="50" height="80"/><rect x="145" y="45" width="40" height="50"/><rect x="205" y="25" width="48" height="70"/><rect x="270" y="38" width="42" height="57"/><rect x="325" y="10" width="42" height="85"/></g><g fill="#f1dca8"><path d="M90 25h8v10h-8zm15 0h8v10h-8zm105 10h8v10h-8zm15 0h8v10h-8z"/></g></svg></div><div class="game-info"><h3>SimCity</h3><span class="arrow">↗</span></div></a>
+<a class="game" href="./burgus.html"><div class="thumb"><svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#b6c3a2"/><path d="M0 110L80 55 155 100 245 42 400 100V150H0Z" fill="#718c67"/><path d="M65 120V60H125V120M55 60L95 25 135 60M260 120V50H330V120M250 50L295 15 340 50" fill="#c6b58f" stroke="#716b59" stroke-width="3"/><path d="M175 130V70H225V130M165 70L200 38 235 70" fill="#b49b70" stroke="#716b59" stroke-width="3"/><path d="M0 130H400" stroke="#d7c9a6" stroke-width="14"/></svg></div><div class="game-info"><h3>Burgus</h3><span class="arrow">↗</span></div></a>
+<a class="game" href="./colonia.html"><div class="thumb"><svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice"><rect width="400" height="150" fill="#a9c6c0"/><path d="M0 70Q100 40 200 75T400 60V150H0Z" fill="#71956b"/><path d="M0 105Q120 85 210 110T400 100V150H0Z" fill="#4f91a4"/><g fill="#d7c8a7" stroke="#887b63" stroke-width="2"><path d="M40 105V45H90V105L65 25Z"/><path d="M125 112V60H185V112L155 38Z"/><path d="M245 108V38H305V108L275 18Z"/><path d="M325 112V58H370V112L348 35Z"/></g><path d="M0 125L400 125" stroke="#d8c9a6" stroke-width="5"/></svg></div><div class="game-info"><h3>Colonia</h3><span class="arrow">↗</span></div></a>
+</nav>
 </main>
-<footer><span>SIM/CITY</span><span>SELECT A WORLD TO BEGIN</span><span>© 2026</span></footer>
+<footer>SIM/CITY &nbsp; · &nbsp; THREE WORLDS TO EXPLORE</footer>
 </div>
 </body>
 </html>
