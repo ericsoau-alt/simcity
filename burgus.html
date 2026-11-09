@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BURGUS</title>
+<meta name="description" content="BURGUS: a medieval town-building game in the browser. Grow a ford of 1066 into a free city: fields and flocks, crafts and markets, walls, castles and raids, a cathedral built over generations.">
+<meta name="theme-color" content="#2b1e15">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BURGUS: a medieval town">
+<meta property="og:description" content="Grow a ford of 1066 into a free city: fields and flocks, crafts and markets, walls, castles and raids, a cathedral built over generations.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232b1e15'/%3E%3Cpath d='M14 54V26h6v-6h6v6h4V14h4v12h4v-6h6v6h6v28z' fill='%23d9b45a'/%3E%3Cpath d='M28 54V42a4 4 0 0 1 8 0v12z' fill='%232b1e15'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+SC:wght@500;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 <style>
@@ -239,6 +246,9 @@ select{font-family:var(--font);font-size:14px;color:var(--ink);background:linear
 input[type=checkbox]{accent-color:#8a2a20}
 button.tool{width:68px} button.tool .lb{max-width:64px;font-size:11.5px}
 
+/* the start screen's help: keyboard and mouse, or touch */
+#splash .help .touch{display:none} @media (pointer:coarse){#splash .help .desk{display:none} #splash .help .touch{display:inline}}
+
 </style>
 </head>
 <body>
@@ -294,14 +304,14 @@ button.tool{width:68px} button.tool .lb{max-width:64px;font-size:11.5px}
     <label class="opt">Language: <select id="optLang"><option value="en">English</option><option value="zh-CN">简体中文</option><option value="ja">日本語</option></select></label>
     <label class="opt">Land: <select id="optSize"><option value="48">small (48)</option><option value="64" selected>middling (64)</option><option value="80">wide (80)</option></select></label>
     <p class="help">Lay paths, paint cottages and fields, and get your people through the winter.<br>
-      Scroll to zoom · right-drag to turn · middle-drag or WASD to move · Space pauses</p>
+      <span class="desk">Scroll to zoom · right-drag to turn · middle-drag or WASD to move · Space pauses</span><span class="touch">Drag to move · pinch to zoom · twist with two fingers to turn · tap to look</span></p>
   </div>
 </div>
 <div id="menu" class="hidden">
   <button data-act="sound">Sound: on</button><button data-act="music">Music: on</button><button data-act="follow">Follow someone (V)</button><button data-act="lang">Language</button><button data-act="save">Save</button><button data-act="load">Load</button><button data-act="new">New town</button><button data-act="close">Close</button>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- game modules: order matters (classic scripts share one global scope) -->
 <!-- sim: no DOM, no THREE (the tests run these alone) -->
 <script>
@@ -2708,6 +2718,7 @@ const I18N_ROWS=[
 ["It is on fire","正在着火","燃えている"],["Must be next to a path","必须靠近道路","道のそばでなければならない"],["Must stand by the woods (more trees within 6 tiles)","必须建在林边（6格内要有更多树）","森のそばに建てること（6マス以内にもっと木が要る）"],
 ["Must stand on the river bank","必须建在河岸上","川岸に建てること"],["Must stand partly on a hill","必须部分建在山上","一部が丘にかかること"],["Not on water","不能建在水上","水の上には建てられない"],["Nothing to clear","没有可清除的东西","撤去するものがない"],["Off the map","超出地图","地図の外"],
 ["Someone lives or works here: clear it first","有人在这里居住或工作：先清除","ここに住む人か働く人がいる：先に撤去しよう"],["Something is built here","这里已有建筑","ここには何か建っている"],["The reeve's hall stays","庄头大厅不能拆","荘官館は残る"],
+["Drag to move · pinch to zoom · twist with two fingers to turn · tap to look","拖动移动 · 双指捏合缩放 · 双指旋转转向 · 轻点查看","ドラッグで移動 · ピンチで拡大 · 二本指でひねって回転 · タップで見る"],
 /* ---- options on the start screen */
 ["small (48)","小 (48)","小 (48)"],["middling (64)","中 (64)","中 (64)"],["wide (80)","大 (80)","大 (80)"],
 ["A medieval town, from a ford in 1066 to a chartered borough","一座中世纪城镇，从1066年的渡口到获得特许的自治市镇","中世の町。1066年の渡し場から特許状を得た自治都市まで"]
@@ -4877,6 +4888,19 @@ function flashTip(s){tipText(s,true); tipFlash=performance.now()+1400; busEmit('
 function initInput(){
   const el=renderer.domElement;
   el.addEventListener('contextmenu',e=>e.preventDefault());
+  /* two fingers: pinch to zoom, twist to turn, move together to pan (one finger works as the mouse does) */
+  const fingers=new Map(); let pinch=null;
+  const pinchState=()=>{const [a,b]=[...fingers.values()]; return {d:Math.hypot(b.x-a.x,b.y-a.y),ang:Math.atan2(b.y-a.y,b.x-a.x),mx:(a.x+b.x)/2,my:(a.y+b.y)/2};};
+  el.addEventListener('pointerdown',e=>{if(e.pointerType!=='touch')return; fingers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(fingers.size===2){drag=null; pinch=pinchState(); e.stopImmediatePropagation();}},true);
+  el.addEventListener('pointermove',e=>{if(e.pointerType!=='touch'||!fingers.has(e.pointerId))return; fingers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(fingers.size<2||!pinch)return; e.stopImmediatePropagation(); const P=pinchState();
+    view.dist=clamp(view.dist*pinch.d/Math.max(20,P.d),6,90);
+    let da=P.ang-pinch.ang; if(da>Math.PI)da-=Math.PI*2; if(da<-Math.PI)da+=Math.PI*2; view.theta-=da;
+    const dx=P.mx-pinch.mx, dy=P.my-pinch.my, c=Math.cos(view.theta), s=Math.sin(view.theta), k=view.dist*.0016;
+    view.tx=clamp(view.tx+(-s*dx-c*dy)*k,0,N); view.tz=clamp(view.tz+(c*dx-s*dy)*k,0,N); if(follow)stopFollow(); pinch=P;},true);
+  const lift=e=>{if(e.pointerType!=='touch')return; fingers.delete(e.pointerId); if(fingers.size<2){if(pinch){drag=null; e.stopImmediatePropagation();} pinch=null;}};
+  el.addEventListener('pointerup',lift,true); el.addEventListener('pointercancel',lift,true);
   el.addEventListener('pointerdown',e=>{
     el.setPointerCapture(e.pointerId);
     const t=pickTile(e.clientX,e.clientY);
