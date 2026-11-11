@@ -51,10 +51,13 @@ kbd{font:10px ui-monospace,monospace;border:1px solid var(--line2);border-bottom
 #minimapWrap{position:fixed;right:18px;bottom:18px;width:204px;padding:9px;z-index:11}.minimap-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;font-size:9px;letter-spacing:.19em;color:var(--gold)}.minimap-head button{border:0;background:transparent;color:var(--dim);height:16px}.minimap-head svg{width:12px}#minimap{width:184px;height:184px;display:block;border:1px solid rgba(222,198,133,.25);border-radius:3px;cursor:pointer;image-rendering:pixelated}.map-modes{display:flex;margin-top:7px;gap:2px}.map-modes button{flex:1;border:0;border-radius:3px;background:transparent;color:var(--faint);font-size:7px;letter-spacing:.06em;padding:5px 1px}.map-modes button.on{background:rgba(216,183,108,.13);color:var(--gold2)}.map-modes button:hover{color:var(--ink)}.map-legend{display:flex;gap:8px;margin-top:6px;font-size:7px;color:var(--dim)}.dot{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:3px}.dot.home{background:#d99a62}.dot.mana{background:#8c87d8}.dot.civic{background:#7f9b9b}#minimapWrap.collapsed{width:120px}#minimapWrap.collapsed canvas,#minimapWrap.collapsed .map-modes,#minimapWrap.collapsed .map-legend{display:none}
 
 /* Panels */
-.side-panel{position:fixed;z-index:25;right:18px;top:88px;width:310px;max-height:calc(100vh - 190px);overflow:auto;padding:14px 16px;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}.panel-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:13px}.panel-head>span{font-size:9px;letter-spacing:.2em;color:var(--gold)}.panel-head .icon-button{width:25px;height:25px}.panel-head .icon-button svg{width:14px}
+.side-panel{position:fixed;z-index:25;right:18px;top:88px;width:310px;max-height:calc(100vh - 190px);overflow:auto;padding:14px 16px;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;backdrop-filter:none}.panel-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:13px}.panel-head>span{font-size:9px;letter-spacing:.2em;color:var(--gold)}.panel-head .icon-button{width:25px;height:25px}.panel-head .icon-button svg{width:14px}
 .survey-title{display:flex;gap:12px;align-items:center;margin-bottom:13px}.survey-icon{width:43px;height:43px;border:1px solid var(--line2);background:rgba(216,183,108,.07);border-radius:8px;display:grid;place-items:center;color:var(--gold2)}.survey-icon svg{width:24px;height:24px}.survey-title h2{font:normal 20px Georgia,serif;color:#f0e4c7}.survey-title small{color:var(--gold);font-size:9px;letter-spacing:.09em;text-transform:uppercase}.survey-desc{font-size:12px;color:#b5b8ab;line-height:1.55;margin-bottom:13px}.stat-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(202,182,127,.12);padding:7px 0;font-size:11px;color:var(--dim)}.stat-row b{font:500 11px ui-monospace,monospace;color:var(--ink);text-align:right}.stat-row b.good{color:var(--green)}.stat-row b.warn{color:var(--red)}.survey-actions{display:flex;gap:6px;margin-top:14px}.survey-actions button,.drawer-action{flex:1;border:1px solid var(--line2);background:rgba(216,183,108,.09);color:var(--gold2);border-radius:5px;padding:8px 6px;font-size:10px}.survey-actions button:hover{background:rgba(216,183,108,.16)}.survey-actions button.danger{color:var(--red);border-color:rgba(224,131,114,.3);background:rgba(224,131,114,.05)}.survey-actions button:disabled{opacity:.4;cursor:default}.survey-note{font-size:10px;line-height:1.45;color:var(--dim);padding:9px;margin-top:12px;background:rgba(0,0,0,.13);border-left:2px solid var(--gold);border-radius:2px}
 .drawer-section{margin-bottom:18px}.drawer-section h3{font-size:9px;letter-spacing:.17em;color:var(--gold);margin-bottom:8px}.drawer-copy{font-size:12px;color:#b4b8ac;line-height:1.65}.drawer-copy p{margin-bottom:10px}.drawer-copy b{color:#e5ddc8}.drawer-copy ul{padding-left:17px}.drawer-copy li{margin-bottom:6px}.drawer-copy kbd{font-size:9px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.metric{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:5px;padding:9px}.metric small{display:block;color:var(--dim);font-size:9px;margin-bottom:5px}.metric b{font:500 15px ui-monospace,monospace;color:var(--gold2)}.tax-label{display:flex;justify-content:space-between;font-size:11px;margin:8px 0;color:var(--dim)}.tax-label b{color:var(--gold2)}input[type=range]{accent-color:var(--gold);width:100%}.save-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.save-actions button{border:1px solid var(--line2);border-radius:5px;background:rgba(216,183,108,.08);color:var(--gold2);font-size:10px;padding:10px 5px}.save-actions button:hover{background:rgba(216,183,108,.15)}.save-note{font-size:10px;line-height:1.5;color:var(--dim);margin-top:10px}
 .chronicle-entry{position:relative;padding:0 0 14px 17px;border-left:1px solid var(--line);margin-left:4px}.chronicle-entry:before{content:"";position:absolute;left:-4px;top:4px;width:7px;height:7px;background:#667f71;border:1px solid #a9a88b;border-radius:50%}.chronicle-entry.good:before{background:var(--gold)}.chronicle-entry.danger:before{background:var(--red)}.chronicle-entry.magic:before{background:var(--violet)}.chronicle-entry small{font:8px ui-monospace,monospace;color:var(--gold);letter-spacing:.05em}.chronicle-entry p{font:12px Georgia,serif;color:#c8c6b8;line-height:1.5;margin-top:4px}
+
+/* Guided tutorial */
+#tutorialPanel{position:fixed;z-index:35;left:18px;top:330px;width:300px;padding:14px 16px;max-height:calc(100vh - 430px);overflow:auto;backdrop-filter:none;border-color:var(--line2)}.tutorial-head{display:flex;align-items:center;justify-content:space-between;color:var(--gold);font-size:9px;letter-spacing:.15em}.tutorial-head .icon-button{width:24px;height:24px}.tutorial-head svg{width:13px}.tutorial-progress{height:3px;background:rgba(255,255,255,.08);margin:8px 0 13px;border-radius:3px;overflow:hidden}.tutorial-progress i{display:block;height:100%;background:var(--gold2);transition:width .3s}#tutorialPanel h2{font:normal 20px Georgia,serif;color:#f0e4c7;margin-bottom:8px}#tutorialPanel>p{font-size:12px;line-height:1.55;color:#b8bcae}.tutorial-tip{font-size:10px;line-height:1.45;color:var(--gold2);padding:9px 0}.tutorial-primary{width:100%;padding:9px;border:1px solid var(--line2);border-radius:5px;background:rgba(216,183,108,.13);color:var(--gold2);font-size:10px}.tutorial-primary:hover{background:rgba(216,183,108,.22)}.tutorial-footer{display:flex;justify-content:space-between;margin-top:10px}.tutorial-footer button{background:none;border:0;color:var(--faint);font-size:9px;padding:3px 0}.tutorial-footer button:hover{color:var(--ink)}#tutorialLauncher{position:fixed;z-index:35;left:18px;top:330px;padding:10px 13px;color:var(--gold2);font-size:10px;display:flex;gap:7px;align-items:center;backdrop-filter:none}#tutorialLauncher svg{width:15px}.tutorial-focus{box-shadow:0 0 0 2px var(--gold2),0 0 20px rgba(240,212,146,.65)!important;animation:tutorialFocus 1.4s ease-in-out infinite}@keyframes tutorialFocus{50%{box-shadow:0 0 0 3px var(--gold2),0 0 28px rgba(240,212,146,.85)}}
 
 /* Tooltips, cursor, toasts */
 #tooltip{position:fixed;z-index:60;pointer-events:none;width:260px;background:rgba(15,27,27,.98);border:1px solid var(--line2);border-radius:7px;padding:12px 13px;box-shadow:0 10px 30px rgba(0,0,0,.4)}#tooltip h3{font:normal 16px Georgia,serif;color:#f1e2bd;margin-bottom:4px}#tooltip .tip-cost{font:10px ui-monospace,monospace;color:var(--gold);margin-bottom:8px}#tooltip p{font-size:11px;line-height:1.5;color:#b8bbae}#tooltip .tip-lock{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);color:var(--red);font-size:10px}
@@ -64,6 +67,10 @@ kbd{font:10px ui-monospace,monospace;border:1px solid var(--line2);border-bottom
 /* Splash */
 #splash{position:fixed;z-index:100;inset:0;background:rgba(7,19,20,.55);backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto}#splash.gone{opacity:0;pointer-events:none;transition:opacity .65s}#splashCard{width:min(940px,100%);display:grid;grid-template-columns:1.06fr .94fr;background:linear-gradient(135deg,rgba(28,48,43,.98),rgba(14,27,28,.99));border:1px solid var(--line2);border-radius:13px;box-shadow:0 30px 100px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.05);overflow:hidden;position:relative}#splashCard:before{content:"";position:absolute;inset:8px;border:1px solid rgba(216,183,108,.1);border-radius:8px;pointer-events:none}.splash-intro{padding:42px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(216,183,108,.09),transparent 55%);border-right:1px solid var(--line)}.crest{width:78px;height:88px;margin-bottom:18px;filter:drop-shadow(0 5px 10px rgba(0,0,0,.25))}.crest svg{width:100%;height:100%}.splash-kicker{font-size:9px;letter-spacing:.28em;color:var(--gold);font-weight:700}.splash-intro h1{font:normal 45px Georgia,serif;letter-spacing:.1em;color:#f0dfb5;margin:12px -10px 8px;text-indent:.1em;text-shadow:0 3px 20px rgba(216,183,108,.13)}.title-rule{display:flex;align-items:center;gap:10px;color:var(--gold);width:70%;margin-bottom:18px}.title-rule i{height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1}.title-rule i:last-child{transform:scaleX(-1)}.title-rule span{font-size:11px}.splash-intro>p{font:15px/1.75 Georgia,serif;color:#bdc0b1;max-width:350px}.feature-row{display:flex;justify-content:center;gap:17px;border-top:1px solid var(--line);margin-top:28px;padding-top:18px;width:100%}.feature-row span{font-size:8px;color:#a7ad9e;display:flex;flex-direction:column;align-items:center;gap:7px}.feature-row svg{color:var(--gold);width:18px;height:18px}
 .splash-setup{padding:35px 34px 28px}.splash-setup h2{font:normal 25px Georgia,serif;color:#eee1c4;margin:8px 0 17px}.name-row,.seed-row{display:flex;gap:6px}.name-row input,.seed-row input{min-width:0;flex:1;background:rgba(5,17,18,.35);border:1px solid var(--line2);border-radius:5px;color:#f0e4ca;padding:10px 12px;font:17px Georgia,serif;letter-spacing:.06em;user-select:text}.name-row .icon-button,.seed-row .icon-button{border:1px solid var(--line);height:auto;width:39px}.setup-map{display:flex;gap:14px;margin:17px 0}#mapPreview{width:130px;height:130px;border:1px solid var(--line2);border-radius:6px;flex:none;image-rendering:pixelated}.setup-map>div{flex:1;min-width:0}.field-label{display:block;font-size:8px;letter-spacing:.17em;color:var(--gold);margin:2px 0 6px}.seed-row input{font:11px ui-monospace,monospace;padding:7px 9px;letter-spacing:.08em}.seed-row .icon-button{width:32px}.setup-map p{font-size:10px;line-height:1.45;color:var(--dim);margin-top:9px}.setup-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}.setup-row label{font-size:9px;color:var(--dim);letter-spacing:.04em}.setup-row select{display:block;width:100%;margin-top:6px;background:#172c2a;border:1px solid var(--line);border-radius:5px;color:#d5d3c3;padding:8px 5px;font-size:10px}.primary-button,.secondary-button{width:100%;border-radius:5px;padding:12px 10px;font-weight:700;font-size:11px;letter-spacing:.13em;display:flex;align-items:center;justify-content:center;gap:8px}.primary-button{border:1px solid #e1c37d;background:linear-gradient(180deg,#d8b96f,#b99750);color:#172722;box-shadow:0 4px 16px rgba(216,183,108,.12)}.primary-button:hover{filter:brightness(1.1);transform:translateY(-1px)}.primary-button svg,.secondary-button svg{width:15px}.secondary-button{border:1px solid var(--line2);background:transparent;color:var(--gold2);margin-top:7px}.secondary-button:hover{background:rgba(216,183,108,.08)}.text-button{display:block;margin:10px auto 0;border:0;background:transparent;color:var(--dim);font-size:10px;text-decoration:underline;text-underline-offset:3px}.splash-note{text-align:center;color:#6f7e73;font-size:9px;margin-top:12px;line-height:1.4}
+
+/* Idle hero showcase */
+#heroShowcase{position:fixed;inset:0;z-index:140;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(5,15,18,.84);backdrop-filter:blur(12px);overflow:auto}.hero-showcase-shell{position:relative;width:min(900px,100%);min-height:490px;display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#203c37,#101f22);box-shadow:0 35px 110px rgba(0,0,0,.65)}#btnCloseHeroShowcase{position:absolute;z-index:2;right:13px;top:13px;border-color:var(--line);background:rgba(10,23,24,.45)}.hero-showcase-stage{position:relative;min-height:430px;background:radial-gradient(circle at 50% 43%,rgba(216,183,108,.19),transparent 43%),linear-gradient(180deg,rgba(80,111,92,.16),rgba(5,16,19,.35));border-right:1px solid var(--line)}.hero-showcase-stage:before{content:"";position:absolute;inset:18px;border:1px solid rgba(216,183,108,.11);border-radius:9px;pointer-events:none}#heroShowcaseCanvas{display:block;width:100%;height:100%;position:absolute;inset:0}#heroShowcaseRole{position:absolute;left:50%;bottom:27px;transform:translateX(-50%);white-space:nowrap;color:var(--gold2);font-size:9px;font-weight:700;letter-spacing:.2em;text-shadow:0 2px 8px #000}.hero-showcase-copy{padding:48px 40px 32px;display:flex;flex-direction:column;justify-content:center}.hero-showcase-copy h2{font:normal 42px Georgia,serif;color:#f2e1ba;margin:16px 0 5px}.hero-showcase-tier{color:var(--gold);font:11px ui-monospace,monospace;letter-spacing:.08em;margin-bottom:18px}#heroShowcaseDescription{font:14px/1.7 Georgia,serif;color:#c2c5b7;min-height:72px}.hero-showcase-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:22px 0 17px}.hero-showcase-stats>div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;padding:11px 9px;border:1px solid var(--line);border-radius:6px;background:rgba(255,255,255,.025)}.hero-showcase-stats svg{color:var(--gold);width:16px;height:16px}.hero-showcase-stats b{font-size:10px;color:#e8dcc2}.hero-showcase-stats small{font-size:8px;line-height:1.45;color:var(--dim)}.hero-showcase-path{font:12px/1.5 Georgia,serif;color:var(--gold2);padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.hero-showcase-dots{display:flex;gap:7px;margin:20px 0 13px}.hero-showcase-dots span{width:23px;height:4px;border-radius:3px;background:rgba(255,255,255,.12);transition:background .3s,width .3s}.hero-showcase-dots span.on{width:38px;background:var(--gold2)}.hero-showcase-note{font-size:9px;line-height:1.5;color:var(--faint)}
+@media(max-width:720px){#heroShowcase{padding:10px;align-items:flex-start}.hero-showcase-shell{grid-template-columns:1fr;margin:auto;min-height:0}.hero-showcase-stage{min-height:285px;border-right:0;border-bottom:1px solid var(--line)}.hero-showcase-copy{padding:24px 22px}.hero-showcase-copy h2{font-size:32px;margin-top:11px}#heroShowcaseDescription{font-size:12px;min-height:0}.hero-showcase-stats{margin:15px 0}.hero-showcase-stats>div{padding:8px 6px}.hero-showcase-stats small{font-size:7px}.hero-showcase-note{font-size:8px}}
 
 /* Strategic atlas, warfare and spellbook */
 #threatBanner{position:fixed;z-index:45;top:82px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;border:1px solid rgba(236,123,101,.65);background:rgba(74,32,31,.96);color:#f4c1ae;border-radius:7px;padding:9px 13px;box-shadow:0 8px 30px rgba(0,0,0,.3);font-size:11px;animation:threatPulse 2s infinite}#threatBanner svg{color:#ff9b7e}#threatBanner b{font-size:8px;letter-spacing:.12em;color:#ffd2b9;border-left:1px solid rgba(255,255,255,.2);padding-left:10px}body.has-threat #toastStack{top:128px}@keyframes threatPulse{50%{border-color:#e9a286;box-shadow:0 0 20px rgba(230,110,80,.18)}}
@@ -78,6 +85,7 @@ kbd{font:10px ui-monospace,monospace;border:1px solid var(--line2);border-bottom
 .army-roster{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}.army-roster>span{display:flex;align-items:center;gap:4px;padding:5px 6px;border:1px solid var(--line);border-radius:4px;color:var(--dim);font-size:8px}.army-roster svg{width:12px;height:12px;color:var(--gold)}.army-roster b{margin-left:auto;font:10px ui-monospace,monospace;color:var(--ink)}
 .stockpile-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.stockpile-item{display:flex;align-items:center;gap:8px;padding:9px;border:1px solid var(--line);border-radius:5px;background:rgba(255,255,255,.025)}.stockpile-item>svg{width:20px;height:20px;color:var(--gold)}.stockpile-item small{display:block;font-size:8px;color:var(--dim)}.stockpile-item b{display:block;font:15px ui-monospace,monospace;color:var(--gold2);margin:2px 0}.stockpile-item span{display:block;font:8px ui-monospace,monospace;color:var(--green)}.stockpile-item span.warn{color:var(--red)}.production-warning{display:flex;gap:6px;align-items:center;margin-top:10px;padding:8px;border:1px solid rgba(224,131,114,.3);border-radius:4px;color:#e7ae91;font-size:9px;line-height:1.4}.production-warning svg{width:13px}
 .unit-card{padding:11px;margin-bottom:9px;border:1px solid var(--line);border-radius:6px;background:rgba(255,255,255,.022)}.unit-card-head{display:flex;align-items:center;gap:9px}.unit-card-head>span{width:33px;height:33px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:50%;color:var(--gold2)}.unit-card-head>span svg{width:16px}.unit-card-head h3{font:normal 15px Georgia,serif;color:#e8ddc5;letter-spacing:0;margin:0}.unit-card-head small{font-size:8px;color:var(--dim)}.unit-card-head>b{margin-left:auto;font:19px ui-monospace,monospace;color:var(--gold)}.unit-card>p{font-size:10px;line-height:1.5;color:#adb5aa;margin:9px 0}.unit-card-foot{display:flex;align-items:center;justify-content:space-between;gap:6px}.unit-card-foot>span{font-size:8px;line-height:1.45;color:var(--gold)}.unit-card-foot button{flex:none;display:flex;align-items:center;gap:3px;border:1px solid var(--line2);border-radius:4px;background:rgba(216,183,108,.09);color:var(--gold2);padding:6px 8px;font-size:9px}.unit-card-foot button:hover{background:rgba(216,183,108,.17)}.unit-card-foot button:disabled{opacity:.35;cursor:default}.unit-card-foot svg{width:11px}.unit-unavailable{display:block;margin-top:6px;color:#b58e83;font-size:8px;line-height:1.4}
+.hero-recruit{border-color:var(--line2);background:linear-gradient(135deg,rgba(216,183,108,.09),rgba(255,255,255,.02))}.hero-recruit .unit-card-head>b{font-size:16px}.hero-card{border-color:rgba(216,183,108,.25);padding:8px 11px}.hero-card .unit-card-head>span{color:#f2d58d;background:rgba(216,183,108,.08)}.hero-card .unit-card-head>b svg{width:18px;color:var(--gold2)}.hero-class-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:10px 0}.hero-class-picker button{display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px 2px;border:1px solid var(--line);border-radius:4px;background:rgba(255,255,255,.02);color:var(--dim);font-size:8px}.hero-class-picker button.on{border-color:var(--gold2);color:var(--gold2);background:rgba(216,183,108,.13)}.hero-class-picker svg{width:15px;height:15px}.hero-path{color:var(--gold2)!important;font-family:Georgia,serif!important}.hero-card .unit-card-head>b{font:14px Georgia,serif;color:var(--gold2)}.hero-card .unit-card-foot{margin-top:9px}.hero-card.hero-tier-2{border-color:rgba(197,208,213,.4)}.hero-card.hero-tier-3{border-color:rgba(229,195,95,.65);background:linear-gradient(135deg,rgba(229,195,95,.09),rgba(255,255,255,.02))}
 
 /* Photo mode and responsive */
 body.photo .game-ui,body.photo #vignette{display:none!important}#photoBar{position:fixed;z-index:80;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:7px 9px;background:rgba(15,28,27,.88);border:1px solid var(--line2);border-radius:8px;backdrop-filter:blur(8px)}#photoBar>span{font-size:9px;letter-spacing:.14em;color:var(--gold);padding:0 9px}#photoBar button{border:1px solid var(--line);border-radius:5px;background:rgba(216,183,108,.07);color:#d8d5c5;font-size:10px;padding:8px 10px}#photoBar button:hover{color:var(--gold2);border-color:var(--line2)}#photoBar svg{width:13px;height:13px;margin-right:4px}
@@ -89,6 +97,7 @@ body.photo .game-ui,body.photo #vignette{display:none!important}#photoBar{positi
 @media(max-width:1000px){.world-layout{grid-template-columns:minmax(0,1fr) 295px;gap:12px;padding:13px}.world-head{padding:13px 17px}.world-head h1{font-size:23px}.atlas-legend{gap:8px}.atlas-legend .atlas-coords{width:100%;justify-content:center;margin:0}}
 @media(max-width:720px){#topbar .brand>div,#topbar .resource.mana,#topbar .resource.materials{display:none}#worldScreen{padding:7px;overflow-y:auto}.world-shell{height:auto;min-height:100%;overflow:visible}.world-head{padding:12px;position:sticky;top:0;z-index:4;background:#1a302d}.world-head h1{font-size:19px}.world-head .eyebrow{font-size:8px}.world-head-actions>span{display:none}.world-layout{display:flex;flex-direction:column;padding:10px;gap:15px}#atlasCanvasWrap{width:100%}.atlas-sidebar{overflow:visible;padding:0 3px}.atlas-legend{font-size:7px;gap:7px;margin-bottom:5px}.world-foot{padding:10px 12px;flex-direction:column;gap:5px}.world-foot span:last-child{display:none}.atlas-section h2{font-size:23px}#threatBanner{top:64px;width:calc(100vw - 20px);justify-content:center;padding:8px;font-size:9px}#threatBanner b{display:none}body.has-threat #toastStack{top:105px}body.has-threat .side-panel{top:105px;max-height:calc(100vh - 192px)}.top-actions #btnHelp{display:none}}
 @media(max-width:420px){.speed-controls [data-speed="2"],.speed-controls [data-speed="4"]{display:none}.top-actions .icon-button{width:27px}}
+@media(max-width:720px){#tutorialPanel,#tutorialLauncher{left:10px;top:auto;bottom:78px;width:calc(100vw - 20px);max-height:42vh}#tutorialPanel{padding:11px 13px}#tutorialPanel h2{font-size:17px}#tutorialPanel>p{font-size:11px}.tutorial-tip{padding:6px 0}#tutorialLauncher{width:auto;right:10px;justify-content:center}}
 
 
 </style>
@@ -189,6 +198,16 @@ body.photo .game-ui,body.photo #vignette{display:none!important}#photoBar{positi
   </div>
 </nav>
 
+<aside id="tutorialPanel" class="panel game-ui hidden" aria-label="Guided tutorial" aria-live="polite">
+  <div class="tutorial-head"><span id="tutorialStepLabel">LESSON 1 OF 7</span><button class="icon-button" data-tutorial="hide" title="Hide tutorial" aria-label="Hide tutorial"><i data-lucide="minus"></i></button></div>
+  <div class="tutorial-progress"><i id="tutorialBar"></i></div>
+  <h2 id="tutorialTitle"></h2><p id="tutorialText"></p>
+  <div id="tutorialTip" class="tutorial-tip"></div>
+  <button id="tutorialAction" class="tutorial-primary" data-tutorial="action"></button>
+  <div class="tutorial-footer"><button data-tutorial="skip-step">Skip lesson</button><button data-tutorial="skip">End tutorial</button></div>
+</aside>
+<button id="tutorialLauncher" class="panel game-ui hidden" data-tutorial="resume"><i data-lucide="graduation-cap"></i> Resume tutorial</button>
+
 <div id="tooltip" class="hidden"></div>
 <div id="cursorTag" class="hidden"></div>
 <div id="toastStack" aria-live="polite"></div>
@@ -211,12 +230,37 @@ body.photo .game-ui,body.photo #vignette{display:none!important}#photoBar{positi
       <div class="setup-map"><canvas id="mapPreview" width="180" height="180"></canvas><div><label class="field-label">WORLD SEED</label><div class="seed-row"><input id="seedInput" value="18427" inputmode="numeric" aria-label="World seed"><button class="icon-button" id="btnReroll" title="Generate another world" aria-label="Generate another world"><i data-lucide="refresh-cw"></i></button></div><p>Every seed makes a different island, with forests, hills and hidden crystal outcrops.</p></div></div>
       <div class="setup-row"><label>Realm size<select id="sizeSelect"><option value="24">24 × 24 · Intimate</option><option value="32" selected>32 × 32 · Classic</option><option value="40">40 × 40 · Expansive</option></select></label><label>Founding charter<select id="difficultySelect"><option value="story">Story · 2,400 gold</option><option value="standard" selected>Standard · 1,800 gold</option><option value="hard">Hardy · 1,200 gold</option></select></label></div>
       <button id="btnStart" class="primary-button"><i data-lucide="flag"></i> FOUND YOUR REALM</button>
+      <button id="btnTutorial" class="secondary-button"><i data-lucide="graduation-cap"></i> GUIDED TUTORIAL · NEW REALM</button>
       <button id="btnContinue" class="secondary-button hidden"><i data-lucide="book-open"></i> CONTINUE SAVED REALM</button>
       <button id="btnResume" class="text-button hidden">Return to your current realm</button>
       <p class="splash-note">Your realm saves in this browser every moon. No account. No connection needed.</p>
     </section>
   </div>
 </div>
+
+<section id="heroShowcase" class="hidden" aria-label="Hero class showcase" aria-live="polite">
+  <div class="hero-showcase-shell">
+    <button id="btnCloseHeroShowcase" class="icon-button" aria-label="Close hero showcase" title="Return to realm setup"><i data-lucide="x"></i></button>
+    <div class="hero-showcase-stage">
+      <canvas id="heroShowcaseCanvas" aria-label="Rotating tier-one hero model"></canvas>
+      <span id="heroShowcaseRole">FRONT-LINE CHAMPION</span>
+    </div>
+    <div class="hero-showcase-copy">
+      <div class="eyebrow"><i data-lucide="sparkles"></i> MEET THE HEROES · <span id="heroShowcaseCount">1 / 8</span></div>
+      <h2 id="heroShowcaseName">Warrior</h2>
+      <p id="heroShowcaseTier" class="hero-showcase-tier">Tier I · Warrior</p>
+      <p id="heroShowcaseDescription"></p>
+      <div class="hero-showcase-stats">
+        <div><i data-lucide="shield"></i><b>+8 defense</b><small>Protects the realm</small></div>
+        <div><i data-lucide="route"></i><b>Local patrols</b><small>Uses no garrison space</small></div>
+        <div><i data-lucide="arrow-up"></i><b>3 hero tiers</b><small>Upgrades cost 20, then 40</small></div>
+      </div>
+      <p id="heroShowcasePath" class="hero-showcase-path"></p>
+      <div id="heroShowcaseDots" class="hero-showcase-dots"></div>
+      <p class="hero-showcase-note">A new hero answers the call every few seconds. Move the mouse or press any key to return.</p>
+    </div>
+  </div>
+</section>
 
 <script data-source="vendor/three.min.js">
 console.warn('Scripts "build/three.js" and "build/three.min.js" are deprecated with r150+, and will be removed with r160. Please use ES Modules or alternatives: https://threejs.org/docs/index.html#manual/en/introduction/Installation'),
@@ -303,10 +347,11 @@ const stats = {
   housing: 0, workers: 0, jobs: 0, jobFill: 1, unemployment: 0,
   foodRate: 0, foodUse: 0, manaRate: 0, manaUse: 0, net: 0,
   safety: 40, health: 55, magic: 0, buildings: 0, roads: 0,
-  defense: 8, armyCap: 4, tradeIncome: 0, spellPower: 0,
+  defense: 8, armyCap: 4, tradeIncome: 0, spellPower: 0, heroRate: 0,
   woodRate: 0, stoneRate: 0, ironRate: 0, weaponRate: 0, weaponPotential: 0,
   woodUse: 0, ironUse: 0, craftFactor: 1,
 };
+const ZOOM_MIN = 4, ZOOM_MAX = 48;
 const view = {
   theta: Math.PI * 0.25, phi: 0.82, dist: 29, sd: 29,
   tx: N / 2, tz: N / 2, stx: N / 2, stz: N / 2,
@@ -320,11 +365,11 @@ function freshRealm(name = 'Elderglen', difficulty = 'standard') {
   return {
     version: GAME_VERSION, name: (name || 'Elderglen').trim().slice(0, 22) || 'Elderglen', difficulty,
     gold: treasury, food: 80, mana: 35, wood: 30, stone: 24, iron: 0, weapons: 2,
-    population: 0, happiness: 72, soldiers: 4, level: 1,
+    population: 0, happiness: 72, soldiers: 4, level: 1, heroPoints: 0, heroes: [],
     troops: { militia: 4, archers: 0, knights: 0, mages: 0 },
     spellCasts: 0, renown: 0, renownBonus: 0, tax: 10, day: 1, month: 0, year: 1, totalDays: 0,
     log: [], nextLogId: 1, nextEvent: 9, completed: {}, unlocked: {}, modifiers: {},
-    lastNet: 0, monthsFounded: 0,
+    lastNet: 0, monthsFounded: 0, tutorial: null,
   };
 }
 function dateLabel() {
@@ -376,7 +421,7 @@ const REALM_LEVELS = [
 /* One entry drives the toolbar, placement rules, simulation, survey and minimap. */
 const BUILDINGS = [
   { id: 'keep', name: 'Ancestral Keep', icon: 'castle', cat: 'wonders', cost: 0, size: 1, hidden: true,
-    desc: 'The heart of your realm. Its first hearth gives your settlers a home and its old guard provides eight defense.', cap: 4, upkeep: 0, joy: 3, defense: 8, armyCap: 4, radius: 3, color: '#d6b568' },
+    desc: 'The heart of your realm. Its first hearth gives your settlers a home, its old guard provides eight defense, and its legends attract heroes.', cap: 4, upkeep: 0, joy: 3, defense: 8, armyCap: 4, hero: 0.5, radius: 3, color: '#d6b568' },
   { id: 'cottage', name: 'Cottage', icon: 'home', cat: 'settlement', cost: 80, size: 1, hotkey: 'C',
     desc: 'A timber-framed home for six villagers. Must touch a path; upgrade it to house more.', cap: 6, upkeep: 0.15, road: true, color: '#d99a62' },
   { id: 'farm', name: 'Sunfield Farm', icon: 'wheat', cat: 'settlement', cost: 110, size: 1, hotkey: 'F',
@@ -396,7 +441,7 @@ const BUILDINGS = [
   { id: 'mason', name: 'Mason’s Yard', icon: 'blocks', cat: 'craft', cost: 420, size: 1, unlock: { level: 3 }, materials: { wood: 14, stone: 18 },
     desc: 'Stonecutters dress blocks beneath a timber crane. Produces cut stone and improves all quarry and mine output by 20%, up to 40%.', jobs: 6, stone: 0.6, masonry: 0.2, upkeep: 0.65, road: true, color: '#999b8e' },
   { id: 'embassy', name: 'Hall of Envoys', icon: 'landmark', cat: 'civic', cost: 700, size: 1, unlock: { level: 4 }, materials: { wood: 20, stone: 35 },
-    desc: 'An ornate diplomatic hall. Envoys improve relations by four extra points and every trade road earns 15% more gold, up to 30%.', jobs: 5, gold: 1.4, lore: 0.1, joy: 4, radius: 4, diplomacy: true, upkeep: 1.1, road: true, color: '#b49b78' },
+    desc: 'An ornate diplomatic hall. Envoys improve relations and trade roads earn more gold, while visiting champions contribute hero points.', jobs: 5, gold: 1.4, lore: 0.1, joy: 4, hero: 0.5, radius: 4, diplomacy: true, upkeep: 1.1, road: true, color: '#b49b78' },
   { id: 'university', name: 'Royal University', icon: 'graduation-cap', cat: 'arcana', cost: 950, size: 1, unlock: { level: 5 }, materials: { wood: 25, stone: 55 },
     desc: 'Twin scholarly towers, a lecture hall and a celestial orrery. Produces renown, strengthens magic and adds spellpower.', jobs: 10, lore: 0.4, magic: 24, manaUse: 1.1, joy: 4, radius: 5, upkeep: 1.8, road: true, color: '#8d7b9e' },
   { id: 'garden', name: 'Rose Garden', icon: 'flower-2', cat: 'nature', cost: 45, size: 1, hotkey: 'G',
@@ -404,13 +449,13 @@ const BUILDINGS = [
   { id: 'market', name: 'Market Square', icon: 'store', cat: 'craft', cost: 190, size: 1, hotkey: 'M', unlock: { pop: 4 },
     desc: 'Bright awnings and busy stalls. Creates five jobs and earns gold every day.', jobs: 5, gold: 2.6, upkeep: 0.5, road: true, color: '#db775c' },
   { id: 'tavern', name: 'The Gilded Hart', icon: 'beer', cat: 'civic', cost: 180, size: 1, hotkey: 'T', unlock: { pop: 8 },
-    desc: 'A warm hearth, tall tales and music. Cheers homes within four tiles.', jobs: 3, gold: 1.1, joy: 10, radius: 4, upkeep: 0.55, road: true, color: '#b96750' },
+    desc: 'A warm hearth, tall tales and music. Cheers homes within four tiles and attracts heroes with stories of your realm.', jobs: 3, gold: 1.1, joy: 10, hero: 0.35, radius: 4, upkeep: 0.55, road: true, color: '#b96750' },
   { id: 'well', name: 'Mana Well', icon: 'gem', cat: 'arcana', cost: 220, size: 1, hotkey: 'A',
     desc: 'Draws three mana a day from the ley lines. Crystal outcrops within two tiles attune it, adding 35%.', mana: 3, upkeep: 0.6, color: '#7d8fe5' },
   { id: 'grove', name: 'Whispering Grove', icon: 'trees', cat: 'nature', cost: 160, size: 1, hotkey: 'V', unlock: { renown: 8 },
     desc: 'An ancient tree and a circle of standing stones. Makes mana and soothes nearby homes.', mana: 0.8, joy: 5, radius: 3, upkeep: 0.25, color: '#598e77' },
   { id: 'guard', name: 'Warden Lodge', icon: 'shield', cat: 'civic', cost: 260, size: 1, hotkey: 'W', unlock: { pop: 15 }, materials: { wood: 8, stone: 10 },
-    desc: 'Patrols keep roads safe and repel goblin raids. Adds 16 defense and houses a small company.', jobs: 4, safety: 48, defense: 16, armyCap: 4, radius: 5, upkeep: 0.9, road: true, color: '#6d8da5' },
+    desc: 'Patrols keep roads safe and repel goblin raids. Adds 16 defense, houses a small company and trains future heroes.', jobs: 4, safety: 48, defense: 16, armyCap: 4, hero: 0.25, radius: 5, upkeep: 0.9, road: true, color: '#6d8da5' },
   { id: 'watchtower', name: 'Watchtower', icon: 'tower-control', cat: 'civic', cost: 240, size: 1, hotkey: 'Y', unlock: { pop: 12 }, materials: { wood: 8, stone: 12 },
     desc: 'Scouts approach roads and fires a warning beacon when enemies march. Adds 14 defense and extends your world sight.', jobs: 2, safety: 20, defense: 14, armyCap: 2, radius: 4, upkeep: 0.65, road: true, color: '#82939b' },
   { id: 'barracks', name: 'Royal Barracks', icon: 'swords', cat: 'civic', cost: 480, size: 1, hotkey: 'Z', unlock: { pop: 28 }, materials: { wood: 16, stone: 24 },
@@ -424,7 +469,7 @@ const BUILDINGS = [
   { id: 'mage', name: 'Astral Spire', icon: 'wand-2', cat: 'arcana', cost: 650, size: 1, hotkey: 'S', unlock: { pop: 40, renown: 30 }, materials: { stone: 30 },
     desc: 'A floating crystal crowns this tower. Adds 14 defense, strengthens spells and reduces their mana cost.', jobs: 6, manaUse: 1.8, magic: 58, defense: 14, joy: 7, safety: 18, radius: 6, upkeep: 1.5, road: true, color: '#7c72cf' },
   { id: 'castle', name: 'High Castle', icon: 'castle', cat: 'wonders', cost: 1600, size: 2, hotkey: 'K', unlock: { level: 5, pop: 65, renown: 70 }, max: 1, maxLevel: 1, materials: { wood: 45, stone: 90 },
-    desc: 'A 2×2 royal stronghold with four towers. Adds 42 defense and quarters ten more soldiers.', cap: 20, jobs: 10, joy: 12, safety: 32, defense: 42, armyCap: 10, radius: 7, upkeep: 3, road: true, color: '#dbc583' },
+    desc: 'A 2×2 royal stronghold with four towers. Adds 42 defense, quarters ten more soldiers and draws great heroes to your banner.', cap: 20, jobs: 10, joy: 12, safety: 32, defense: 42, armyCap: 10, hero: 1, radius: 7, upkeep: 3, road: true, color: '#dbc583' },
   { id: 'roost', name: 'Dragon Roost', icon: 'flame', cat: 'wonders', cost: 2200, size: 2, hotkey: 'D', unlock: { level: 6, pop: 110, renown: 130 }, max: 1, maxLevel: 1, materials: { wood: 60, stone: 110 },
     desc: 'A 2×2 eyrie above the clouds. A bonded dragon brings visitors, fame and 55 defense to the whole realm.', joy: 15, safety: 25, defense: 55, gold: 5, lore: 0.5, upkeep: 4, color: '#b76651' },
 ];
@@ -645,6 +690,66 @@ const UNIT_TYPES = [
   { id: 'mages', name: 'Battlemages', singular: 'Battlemage', icon: 'wand-2', defense: 5, cost: { gold: 40, food: 3, mana: 18, weapons: 1 }, manaUpkeep: 0.08,
     desc: 'Require both a Royal Barracks and Astral Spire. Each adds five defense and 0.5 spellpower, but consumes a little mana daily.' },
 ];
+const HERO_DEFENSE = 8;
+const HERO_CLASSES = {
+  warrior: { name: 'Warrior', icon: 'swords', tiers: ['Warrior', 'Great Warrior', 'Blademaster'], desc: 'A close-combat champion with a heavy blade, layered armor and a war banner.' },
+  knight: { name: 'Knight', icon: 'shield-check', tiers: ['Knight', 'Royal Knight', 'Paladin'], desc: 'An oathbound defender with a crested shield, plated armor and a radiant crown.' },
+  mage: { name: 'Mage', icon: 'wand-2', tiers: ['Mage', 'Archmage', 'Grand Magus'], desc: 'A wielder of arcane power with a crystal staff, floating runes and orbiting crystals.' },
+  ranger: { name: 'Ranger', icon: 'crosshair', tiers: ['Ranger', 'Master Ranger', 'Windrunner'], desc: 'A woodland marksman with a longbow, leaf cloak and a quiver of glowing arrows.' },
+  berserker: { name: 'Berserker', icon: 'axe', tiers: ['Berserker', 'Blood Berserker', 'Juggernaut'], desc: 'A fearless front-line fighter with twin axes, war paint and brutal spiked armor.' },
+  cleric: { name: 'Cleric', icon: 'sun', tiers: ['Cleric', 'High Cleric', 'Saint'], desc: 'A holy champion bearing a sun staff, ivory vestments and a radiant halo.' },
+  necromancer: { name: 'Necromancer', icon: 'skull', tiers: ['Necromancer', 'Deathcaller', 'Lich King'], desc: 'A forbidden spellcaster with skull fetishes, a dark crown and orbiting soul crystals.' },
+  assassin: { name: 'Assassin', icon: 'venetian-mask', tiers: ['Assassin', 'Shadowblade', 'Nightlord'], desc: 'A silent infiltrator with twin daggers, a masked hood and shadow-dark armor.' },
+};
+const HERO_NAMES = ['Aeliana', 'Borin', 'Cael', 'Daria', 'Eldric', 'Freyja', 'Garran', 'Helena', 'Ivar', 'Lyra', 'Merrick', 'Nimue'];
+const HERO_TITLES = ['the Valiant', 'Oakheart', 'the Dawnblade', 'Stormcaller', 'the Everwatch', 'Starborn'];
+function heroDefense(hero) { return HERO_DEFENSE + (clamp(Number(hero?.tier) || 1, 1, 3) - 1) * 4; }
+function heroUpgradeCost(hero) { return hero?.tier >= 3 ? 0 : 20 * 2 ** ((hero?.tier || 1) - 1); }
+function syncHeroes() {
+  if (!realm) return;
+  realm.heroPoints = Number.isFinite(realm.heroPoints) ? Math.max(0, realm.heroPoints) : 0;
+  if (!Array.isArray(realm.heroes)) realm.heroes = [];
+  realm.heroes = realm.heroes.filter(hero => hero && typeof hero === 'object');
+  const classes = Object.keys(HERO_CLASSES);
+  realm.heroes.forEach((hero, index) => {
+    hero.id = Number.isInteger(hero.id) ? hero.id : index + 1;
+    hero.name = String(hero.name || HERO_NAMES[(hero.id - 1) % HERO_NAMES.length]).slice(0, 40);
+    hero.title = String(hero.title || HERO_TITLES[(hero.id - 1) % HERO_TITLES.length]).slice(0, 40);
+    hero.class = HERO_CLASSES[hero.class] ? hero.class : classes[(hero.id - 1) % classes.length];
+    hero.tier = clamp(Math.floor(Number(hero.tier) || 1), 1, 3);
+    hero.defense = heroDefense(hero);
+  });
+}
+function heroCost() { syncHeroes(); return 10 * 2 ** realm.heroes.length; }
+function heroAvailability() {
+  const cost = heroCost();
+  return realm.heroPoints >= cost ? { ok: true, reason: `${cost} hero points` } : { ok: false, reason: `Needs ${cost} hero points` };
+}
+function recruitHero(type = 'warrior') {
+  syncHeroes(); const cost = heroCost(), heroClass = HERO_CLASSES[type];
+  if (!heroClass) { notify('Unknown hero class.', 'bad', 'crown'); return false; }
+  if (realm.heroPoints < cost) { notify(`Recruiting a hero needs ${cost} hero points.`, 'bad', 'crown'); return false; }
+  const id = realm.heroes.reduce((max, hero) => Math.max(max, hero.id), 0) + 1;
+  const cycle = Math.floor((id - 1) / HERO_NAMES.length), suffix = cycle ? ` ${cycle + 1}` : '';
+  const hero = { id, name: HERO_NAMES[(id - 1) % HERO_NAMES.length] + suffix,
+    title: HERO_TITLES[(id - 1) % HERO_TITLES.length], class: type, tier: 1, defense: HERO_DEFENSE };
+  realm.heroPoints -= cost; realm.heroes.push(hero);
+  chronicle(`${hero.name} ${hero.title}, ${heroClass.tiers[0]}, answers the call of ${realm.name}, adding ${HERO_DEFENSE} defense to the realm.`, 'good');
+  notify(`${hero.name} ${hero.title} joins as a ${heroClass.tiers[0]} · ${cost} hero points.`, 'good', heroClass.icon);
+  soundEffect('recruit'); dirty.buildings = dirty.hud = true; saveRequested = true; calculateStats(); return true;
+}
+function upgradeHero(id) {
+  syncHeroes(); const hero = realm.heroes.find(hero => hero.id === Number(id));
+  if (!hero) return false;
+  if (hero.tier >= 3) { notify(`${hero.name} has reached the highest hero tier.`, 'news', 'crown'); return false; }
+  const cost = heroUpgradeCost(hero);
+  if (realm.heroPoints < cost) { notify(`Upgrading ${hero.name} needs ${cost} hero points.`, 'bad', 'crown'); return false; }
+  realm.heroPoints -= cost; hero.tier++; hero.defense = heroDefense(hero);
+  const rank = HERO_CLASSES[hero.class].tiers[hero.tier - 1];
+  chronicle(`${hero.name} ${hero.title} rises to become ${rank}, now granting ${hero.defense} defense.`, 'good');
+  notify(`${hero.name} is now ${rank} · ${cost} hero points.`, 'good', HERO_CLASSES[hero.class].icon);
+  soundEffect('upgrade'); dirty.buildings = dirty.hud = true; saveRequested = true; calculateStats(); return true;
+}
 const RESOURCE_LABELS = { gold: 'gold', food: 'food', mana: 'mana', wood: 'lumber', stone: 'stone', iron: 'iron', weapons: 'weapons' };
 function unitById(id) { return UNIT_TYPES.find(unit => unit.id === id); }
 function syncTroops() {
@@ -1047,8 +1152,8 @@ function coverageAt(x, y, field) {
 }
 function calculateStats() {
   if (!realm) return;
-  syncTroops();
-  let housing = 0, population = 0, jobs = 0, upkeep = 0, trade = 0, foodRate = 0, manaRate = 0, manaUse = 0, lore = 0, defense = 0, armyCap = 0, spellPower = 0;
+  syncTroops(); syncHeroes();
+  let housing = 0, population = 0, jobs = 0, upkeep = 0, trade = 0, foodRate = 0, manaRate = 0, manaUse = 0, lore = 0, defense = 0, armyCap = 0, spellPower = 0, heroRate = 0;
   let woodRate = 0, stoneRate = 0, ironRate = 0, weaponPotential = 0, woodUse = 0, ironUse = 0;
   const homes = [];
   const masonryBoost = 1 + Math.min(0.4, allBuildings().reduce((sum, b) => sum + (BT[b.type].masonry || 0) * (b.damaged ? 0.5 : 1), 0));
@@ -1074,6 +1179,7 @@ function calculateStats() {
     if (def.mana) manaRate += def.mana * mul * (b.attuned ? 1.35 : 1) * (b.damaged ? 0.45 : 1);
     if (def.manaUse) manaUse += def.manaUse * mul * (b.damaged ? 0.45 : 1);
     if (def.lore) lore += def.lore * mul;
+    if (def.hero) heroRate += def.hero * mul * access;
   }
   realm.population = population; updateRealmLevel();
   stats.housing = housing; stats.buildings = countBuildings(); stats.roads = tiles.filter(t => t.road).length;
@@ -1088,10 +1194,10 @@ function calculateStats() {
   stats.woodUse = woodUse * stats.jobFill * stats.craftFactor; stats.ironUse = ironUse * stats.jobFill * stats.craftFactor;
   manaUse += UNIT_TYPES.reduce((sum, unit) => sum + (realm.troops[unit.id] || 0) * (unit.manaUpkeep || 0), 0);
   stats.manaRate = manaRate; stats.manaUse = manaUse;
-  stats.armyCap = Math.floor(armyCap);
+  stats.armyCap = Math.floor(armyCap); stats.heroRate = heroRate * stats.jobFill;
   const troopDefense = UNIT_TYPES.reduce((sum, unit) => sum + (realm.troops[unit.id] || 0) * unit.defense, 0);
   const troopUpkeep = UNIT_TYPES.reduce((sum, unit) => sum + (realm.troops[unit.id] || 0) * (unit.upkeep || 0.06), 0);
-  stats.defense = Math.round(defense + troopDefense + ((realm.modifiers.wardUntil || 0) > realm.totalDays ? 45 : 0));
+  stats.defense = Math.round(defense + troopDefense + realm.heroes.reduce((sum, hero) => sum + heroDefense(hero), 0) + ((realm.modifiers.wardUntil || 0) > realm.totalDays ? 45 : 0));
   stats.tradeIncome = totalTradeIncome(); stats.spellPower = spellPower + (realm.troops.mages || 0) * 0.5;
   const manaFactor = realm.mana > 0.5 || manaRate >= manaUse ? 1 : 0.5;
   manaUse *= manaFactor;
@@ -1137,6 +1243,7 @@ function simulateDay() {
   realm.stone = clamp(realm.stone + stats.stoneRate, 0, 9999);
   realm.iron = clamp(realm.iron + stats.ironRate - stats.ironUse, 0, 9999);
   realm.weapons = clamp(realm.weapons + stats.weaponRate, 0, 9999);
+  realm.heroPoints += stats.heroRate;
 
   const growthFactor = clamp(realm.happiness / 68, 0.15, 1.5) * (realm.food > 1 ? 1 : 0.1);
   for (const b of allBuildings()) {
@@ -1245,7 +1352,7 @@ function restoreSave(data) {
   for (const [resource, fallback] of Object.entries({ wood: 30, stone: 24, iron: 0, weapons: 2 })) {
     realm[resource] = Number.isFinite(realm[resource]) ? Math.max(0, realm[resource]) : fallback;
   }
-  syncTroops();
+  syncTroops(); syncHeroes();
   realm.spellCasts ||= 0; realm.spellCooldowns ||= {}; realm.battlesWon ||= 0;
   worldState = data.world || null;
   const migratedWorld = !validateStrategicWorld();
@@ -1365,7 +1472,7 @@ function pickTile(clientX, clientY) {
 }
 function focusTile(x, y, distance) {
   view.tx = x + 0.5; view.tz = y + 0.5;
-  if (distance) view.dist = clamp(distance, 10, 48);
+  if (distance) view.dist = clamp(distance, ZOOM_MIN, ZOOM_MAX);
 }
 function clearGroup(g) {
   const geometries = new Set();
@@ -1439,6 +1546,27 @@ function cone(g, r, h, color, x = 0, y = h / 2, z = 0, segments = 8, options = {
 }
 function orb(g, r, color, x = 0, y = 0, z = 0, options = {}) {
   return mesh(g, new THREE.IcosahedronGeometry(r, 1), typeof color === 'string' ? mat(color, options) : color, x, y, z);
+}
+function smoothOrb(g,r,color,x=0,y=0,z=0,options={}){
+  return mesh(g,new THREE.SphereGeometry(r,16,12),typeof color==='string'?mat(color,options):color,x,y,z);
+}
+function capsule(g,r,length,color,x=0,y=0,z=0,options={}){
+  return mesh(g,new THREE.CapsuleGeometry(r,length,5,12),typeof color==='string'?mat(color,options):color,x,y,z);
+}
+function blade(g,width,length,color,x=0,y=0,z=0,options={}){
+  const shape=new THREE.Shape();
+  shape.moveTo(-width/2,-length/2);shape.lineTo(width/2,-length/2);shape.lineTo(width/2,length*.32);shape.lineTo(0,length/2);shape.lineTo(-width/2,length*.32);shape.closePath();
+  const geometry=new THREE.ExtrudeGeometry(shape,{depth:.014,steps:1,bevelEnabled:true,bevelSegments:2,bevelSize:.0025,bevelThickness:.0025});geometry.translate(0,0,-.007);
+  return mesh(g,geometry,typeof color==='string'?mat(color,options):color,x,y,z);
+}
+function heroCape(g,width,height,color){
+  const geometry=new THREE.PlaneGeometry(width,height,6,8),positions=geometry.attributes.position;
+  for(let i=0;i<positions.count;i++){
+    const x=positions.getX(i),y=positions.getY(i),bottom=1-(y/height+.5);
+    positions.setX(i,x*(1+bottom*.18));positions.setZ(i,Math.sin(x*42+bottom*2.5)*.012-bottom*.018);
+  }
+  geometry.computeVertexNormals();
+  return mesh(g,geometry,mat(color,{side:THREE.DoubleSide}),0,.19,-.083);
 }
 function prismGeometry(w, d, h) {
   const key = `${w}/${d}/${h}`;
@@ -1572,54 +1700,168 @@ function barracksModel(g, b) {
   banner(g,-0.39,0,-0.35,'#984f49',1.1);banner(g,0.39,0,-0.35,'#984f49',1.1);
   box(g,0.18,0.24,0.18,'#8c704f',0.3,0.12,0.29);
 }
-function soldierModel(type, index = 0) {
-  const g=new THREE.Group(),colors={militia:'#8b5a4b',archers:'#4e7955',knights:'#8b9aa8',mages:'#76558f'};
+function soldierModel(type, index = 0, heroClass = null) {
+  const heroFace=Boolean(heroClass),g=new THREE.Group(),colors={militia:'#8b5a4b',archers:'#4e7955',knights:'#8b9aa8',mages:'#76558f'};
   const cloth=colors[type]||colors.militia,skin=['#d6aa80','#bd8b68','#e0bb91'][index%3],leather='#513c32',steel='#b7bdba';
-  /* A 0.14-high head above a 0.28-high body gives the requested 1:2 ratio. */
-  cyl(g,0.1,0.115,0.018,cloth,0,0.009,0,8);
+  /* Rounded silhouettes retain the stylized proportions without voxel-like limbs. */
+  cyl(g,0.1,0.115,0.018,cloth,0,0.009,0,16);
   for(const side of [-1,1]){
-    box(g,0.052,0.055,0.078,leather,side*0.043,0.045,0.018);
-    box(g,0.044,0.11,0.05,type==='knights'?'#697681':cloth,side*0.043,0.115,0);
+    const boot=capsule(g,0.027,0.018,leather,side*0.043,0.044,0.018);boot.scale.set(0.9,1,1.35);
+    capsule(g,0.025,0.06,type==='knights'?'#697681':cloth,side*0.043,0.115,0);
   }
-  if(type==='mages')cyl(g,0.058,0.105,0.19,cloth,0,0.225,0,6);
-  else cyl(g,0.074,0.09,0.16,type==='knights'?steel:cloth,0,0.21,0,4).rotation.y=Math.PI/4;
-  box(g,0.15,0.025,0.09,leather,0,0.175,0);
-  box(g,0.035,0.03,0.012,'#c7a35b',0,0.175,0.051);
+  if(type==='mages')cyl(g,0.058,0.105,0.19,cloth,0,0.225,0,14);
+  else{const torso=capsule(g,0.065,0.055,type==='knights'?steel:cloth,0,0.215,0);torso.scale.set(1.2,1,0.75);}
+  const belt=cyl(g,0.083,0.083,0.022,leather,0,0.175,0,16);belt.scale.z=0.76;
+  const buckle=smoothOrb(g,0.018,'#c7a35b',0,0.175,0.06);buckle.scale.set(1,0.85,0.35);
   for(const side of [-1,1]){
-    const arm=box(g,0.04,0.125,0.045,type==='knights'?steel:cloth,side*0.098,0.22,0);arm.rotation.z=side*0.12;
-    orb(g,0.025,skin,side*0.105,0.15,0.008);
+    const arm=capsule(g,0.021,0.083,type==='knights'?steel:cloth,side*0.098,0.22,0);arm.rotation.z=side*0.12;
+    smoothOrb(g,0.025,skin,side*0.105,0.15,0.008);
   }
-  const head=mesh(g,new THREE.IcosahedronGeometry(0.07,0),mat(skin),0,0.35,0);head.scale.set(1,1,0.9);
-  box(g,0.112,0.027,0.014,type==='mages'?'#392b4b':'#3c3532',0,0.365,0.058);
-  for(const side of [-1,1])box(g,0.016,0.009,0.008,'#efe4c9',side*0.028,0.365,0.068);
-  box(g,0.023,0.025,0.023,skin,0,0.334,0.075);
+  const head=smoothOrb(g,0.07,skin,0,0.35,0);head.scale.set(1,1.04,0.92);
+  if(heroFace){
+    const hair=['#49352b','#6b4935','#b4936c'][index%3],iris=['#526f68','#5d4938','#557c96'][index%3];
+    for(const side of [-1,1]){
+      const white=smoothOrb(g,0.009,'#f4ead5',side*0.025,0.362,0.064);white.scale.set(1.15,0.72,0.42);
+      const colored=smoothOrb(g,0.0045,iris,side*0.025,0.362,0.0695);colored.scale.z=0.4;
+      const pupil=smoothOrb(g,0.0023,'#211e20',side*0.025,0.362,0.072);pupil.scale.z=0.35;
+      const brow=capsule(g,0.0025,0.019,hair,side*0.025,0.38,0.061);brow.rotation.z=Math.PI/2+side*0.1;
+      const ear=smoothOrb(g,0.016,skin,side*0.069,0.346,0);ear.scale.set(0.55,1,0.65);
+    }
+    const bridge=capsule(g,0.006,0.014,skin,0,0.346,0.064);bridge.scale.z=0.75;
+    const nose=smoothOrb(g,0.013,skin,0,0.333,0.072);nose.scale.set(0.78,0.7,0.85);
+    const mouth=mesh(g,new THREE.TorusGeometry(0.012,0.0018,5,16,Math.PI),mat('#8d554d'),0,0.319,0.062);mouth.rotation.z=Math.PI;
+  }else{
+    const mask=smoothOrb(g,0.064,type==='mages'?'#392b4b':'#3c3532',0,0.362,0.008);mask.scale.set(0.94,0.24,0.88);
+    for(const side of [-1,1]){const eye=smoothOrb(g,0.008,'#efe4c9',side*0.027,0.365,0.067);eye.scale.set(1,0.62,0.35);}
+    const nose=smoothOrb(g,0.016,skin,0,0.334,0.073);nose.scale.set(0.72,0.8,0.75);
+  }
   if(type==='militia'){
-    cyl(g,0.073,0.077,0.055,'#76543d',0,0.411,0,7);box(g,0.12,0.018,0.09,'#654633',0,0.389,0);
-    cyl(g,0.009,0.011,0.45,'#795737',0.14,0.255,0,6);cone(g,0.026,0.075,steel,0.14,0.517,0,4);
-    const shield=cyl(g,0.083,0.083,0.025,'#856044',-0.13,0.22,0.045,8);shield.rotation.x=Math.PI/2;
-    const boss=orb(g,0.025,steel,-0.13,0.22,0.065);boss.scale.z=0.5;
+    cyl(g,0.073,0.08,0.055,'#76543d',0,0.411,0,14);cyl(g,0.09,0.09,0.012,'#654633',0,0.389,0,16);
+    if(!heroFace){
+      cyl(g,0.009,0.011,0.45,'#795737',0.14,0.255,0,8);cone(g,0.026,0.075,steel,0.14,0.517,0,6);
+      const shield=cyl(g,0.083,0.083,0.025,'#856044',-0.13,0.22,0.045,16);shield.rotation.x=Math.PI/2;
+      const boss=orb(g,0.025,steel,-0.13,0.22,0.065);boss.scale.z=0.5;
+    }
   }else if(type==='archers'){
-    cone(g,0.09,0.12,'#385b40',0,0.445,0,7);box(g,0.12,0.018,0.075,'#466a48',0,0.395,0);
-    const bow=mesh(g,new THREE.TorusGeometry(0.105,0.009,4,12,Math.PI*1.45),mat('#936c40'),0.14,0.23,0.025);bow.rotation.z=-Math.PI*0.72;
-    box(g,0.008,0.19,0.008,'#c3b999',0.14,0.23,0.025).rotation.z=-0.45;
-    const quiver=cyl(g,0.032,0.04,0.18,leather,-0.065,0.235,-0.075,6);quiver.rotation.z=-0.2;
-    for(let i=0;i<3;i++){const arrow=cyl(g,0.004,0.004,0.19,'#bca17b',-0.09+i*0.022,0.34,-0.075,4);arrow.rotation.z=-0.2;cone(g,0.012,0.035,steel,-0.11+i*0.022,0.445,-0.075,4);}
+    if(heroClass!=='assassin'){cone(g,0.09,0.12,'#385b40',0,0.445,0,14);cyl(g,0.087,0.087,0.014,'#466a48',0,0.395,0,16);}
+    if(!heroFace){
+      const bow=mesh(g,new THREE.TorusGeometry(0.105,0.009,6,24,Math.PI*1.45),mat('#936c40'),0.14,0.23,0.025);bow.rotation.z=-Math.PI*0.72;
+      box(g,0.008,0.19,0.008,'#c3b999',0.14,0.23,0.025).rotation.z=-0.45;
+    }
+    if(!heroFace||heroClass==='ranger'){
+      const quiver=cyl(g,0.032,0.04,0.18,leather,-0.065,0.235,-0.075,10);quiver.rotation.z=-0.2;
+    }
+    if(!heroFace)for(let i=0;i<3;i++){const arrow=cyl(g,0.004,0.004,0.19,'#bca17b',-0.09+i*0.022,0.34,-0.075,4);arrow.rotation.z=-0.2;cone(g,0.012,0.035,steel,-0.11+i*0.022,0.445,-0.075,4);}
   }else if(type==='knights'){
-    cyl(g,0.078,0.083,0.085,steel,0,0.405,0,8);box(g,0.13,0.035,0.1,steel,0,0.385,0);
-    box(g,0.115,0.024,0.015,'#414a52',0,0.37,0.069);
-    cone(g,0.035,0.15,'#9f4c48',0,0.525,-0.015,5).rotation.z=-0.25;
-    box(g,0.026,0.27,0.018,steel,0.14,0.28,0.02);box(g,0.1,0.022,0.025,'#d0b069',0.14,0.15,0.02);box(g,0.035,0.09,0.03,leather,0.14,0.105,0.02);
-    const shield=cyl(g,0.095,0.095,0.03,'#566f8b',-0.13,0.23,0.04,6);shield.rotation.x=Math.PI/2;
+    const helm=smoothOrb(g,0.083,steel,0,0.405,0);helm.scale.set(1,0.78,1);
+    const helmRim=cyl(g,0.084,0.084,0.022,steel,0,0.382,0,16);helmRim.scale.z=0.94;
+    if(!heroFace)box(g,0.115,0.024,0.015,'#414a52',0,0.37,0.069);
+    else for(const side of [-1,1]){const guard=capsule(g,0.012,0.055,steel,side*0.073,0.354,0.004);guard.rotation.z=side*0.08;}
+    cone(g,0.035,0.15,'#9f4c48',0,0.525,-0.015,8).rotation.z=-0.25;
+    blade(g,0.034,0.3,steel,0.14,0.29,0.02);box(g,0.1,0.022,0.025,'#d0b069',0.14,0.15,0.02);capsule(g,0.019,0.05,leather,0.14,0.105,0.02);
+    const shield=cyl(g,0.095,0.095,0.03,'#566f8b',-0.13,0.23,0.04,16);shield.rotation.x=Math.PI/2;
     box(g,0.025,0.12,0.012,'#d4b568',-0.13,0.23,0.062);box(g,0.1,0.025,0.012,'#d4b568',-0.13,0.23,0.063);
   }else if(type==='mages'){
-    cyl(g,0.105,0.105,0.022,'#4f396b',0,0.405,0,8);cone(g,0.09,0.19,cloth,0,0.505,0,7).rotation.z=0.12;
-    orb(g,0.018,'#d9bb65',0.025,0.46,0.077,{emissive:'#8d66b8',emissiveIntensity:0.5});
-    cyl(g,0.009,0.012,0.46,'#6b4c38',0.14,0.25,0,6);
-    const crystal=mesh(g,new THREE.OctahedronGeometry(0.047,0),mat('#bda2f2',{emissive:'#815ac4',emissiveIntensity:1.2}),0.14,0.515,0);
-    animated.spinners.push({mesh:crystal,base:0.515,phase:index,speed:0.8});
+    cyl(g,0.105,0.105,0.018,'#4f396b',0,0.405,0,18);cone(g,0.09,0.19,cloth,0,0.505,0,14).rotation.z=0.12;
+    smoothOrb(g,0.018,'#d9bb65',0.025,0.46,0.077,{emissive:'#8d66b8',emissiveIntensity:0.5});
+    cyl(g,0.009,0.012,0.46,'#6b4c38',0.14,0.25,0,8);
+    if(!heroFace||heroClass==='mage'){
+      const crystal=mesh(g,new THREE.OctahedronGeometry(0.047,0),mat('#bda2f2',{emissive:'#815ac4',emissiveIntensity:1.2}),0.14,0.515,0);
+      animated.spinners.push({mesh:crystal,base:0.515,phase:index,speed:0.8});
+    }
     box(g,0.13,0.025,0.095,'#d1b768',0,0.18,0);
   }
-  g.userData.soldierType=type;g.userData.headBodyRatio=0.5;
+  g.userData.soldierType=type;g.userData.headBodyRatio=0.5;g.userData.facialFeatures=heroFace?15:0;
+  return g;
+}
+function heroModel(hero, index = 0) {
+  const type=HERO_CLASSES[hero.class]?hero.class:'warrior',tier=clamp(hero.tier||1,1,3);
+  const base={warrior:'militia',knight:'knights',mage:'mages',ranger:'archers',berserker:'militia',cleric:'mages',necromancer:'mages',assassin:'archers'}[type];
+  const g=soldierModel(base,index,type),metal=['#b7824f','#c5d0d5','#e5c35f'][tier-1];
+  const glow=tier===3?{emissive:'#d8a93d',emissiveIntensity:0.65}:{};
+  const cape={warrior:'#8f3f36',knight:'#385d83',mage:'#69458b',ranger:'#356545',berserker:'#8b302c',cleric:'#ded5b7',necromancer:'#292538',assassin:'#30343f'}[type];
+  /* Every class has a different silhouette; tiers add silver and then golden equipment. */
+  heroCape(g,0.18+tier*0.015,0.23+tier*0.025,cape);
+  const heroBelt=cyl(g,0.086,0.086,0.022,metal,0,0.178,0,16,glow);heroBelt.scale.z=0.77;
+  for(const side of [-1,1]){
+    const shoulder=smoothOrb(g,0.045+tier*0.009,metal,side*0.105,0.275,-0.005,glow);shoulder.scale.set(1.2,0.7,1);
+    if(tier>=2)capsule(g,0.027,0.055,metal,side*0.045,0.12,0,glow);
+  }
+  if(type==='warrior'||type==='berserker'||(type==='mage'&&index%3===2)){
+    const hair=['#49352b','#6b4935','#b4936c'][index%3];
+    const beard=smoothOrb(g,0.052,hair,0,0.3,0.012);beard.scale.set(0.88,0.52,0.8);
+    for(const side of [-1,1]){const moustache=capsule(g,0.004,0.018,hair,side*0.011,0.329,0.073);moustache.rotation.z=Math.PI/2+side*0.22;}
+  }
+  if(type==='ranger')for(const side of [-1,1])for(let i=0;i<2;i++)smoothOrb(g,0.0018,'#a9755d',side*(0.035+i*0.008),0.341,0.064);
+  if(type==='warrior'){
+    /* Horned helm and an oversized greatsword distinguish warriors from militia. */
+    for(const side of [-1,1]){const horn=cone(g,0.025,0.12,metal,side*0.075,0.46,0,8);horn.rotation.z=-side*0.65;}
+    blade(g,0.048+tier*0.008,0.34+tier*0.035,metal,0.18,0.36,0.075,glow);
+    box(g,0.12,0.025,0.035,'#6e4a2f',0.18,0.185,0.075);
+    if(tier===3){box(g,0.025,0.42,0.025,'#6b4731',-0.16,0.43,-0.08);banner(g,-0.16,0.28,-0.08,'#c34f3f',0.55);}
+  }else if(type==='knight'){
+    box(g,0.08+tier*0.012,0.08+tier*0.012,0.018,metal,-0.13,0.23,0.08,glow).rotation.z=Math.PI/4;
+    if(tier>=2)for(const side of [-1,1])capsule(g,0.03,0.1,metal,side*0.12,0.26,0.005,glow);
+    if(tier===3){
+      const halo=mesh(g,new THREE.TorusGeometry(0.105,0.009,8,32),mat('#f4d77d',{emissive:'#ffd45f',emissiveIntensity:1.5}),0,0.59,0);halo.rotation.x=Math.PI/2;
+      for(const side of [-1,1])for(let i=0;i<3;i++){const wing=capsule(g,0.016,0.13,'#e9d99f',side*(0.135+i*0.026),0.27+i*0.035,-0.1,glow);wing.rotation.z=side*(0.45+i*0.14);}
+    }
+  }else if(type==='mage'){
+    const magicColor=['#a98be0','#82c9ed','#f0c76c'][tier-1];
+    if(tier>=2){
+      const rune=mesh(g,new THREE.TorusGeometry(0.12,0.009,5,20),mat(magicColor,{emissive:magicColor,emissiveIntensity:1.1}),0,0.49,-0.02);rune.rotation.x=Math.PI/2;
+      orb(g,0.035,magicColor,-0.15,0.42,0,{emissive:magicColor,emissiveIntensity:1.3});
+    }
+    if(tier===3)for(let i=0;i<3;i++){
+      const a=i*Math.PI*2/3,crystal=mesh(g,new THREE.OctahedronGeometry(0.035),mat(magicColor,{emissive:magicColor,emissiveIntensity:1.4}),Math.cos(a)*0.16,0.55+Math.sin(a)*0.04,Math.sin(a)*0.12);
+      animated.spinners.push({mesh:crystal,base:crystal.position.y,phase:i,speed:1.1});
+    }
+  }else if(type==='ranger'){
+    const bow=mesh(g,new THREE.TorusGeometry(0.12+tier*0.012,0.009,6,28,Math.PI*1.5),mat(metal,glow),0.17,0.25,0.07);bow.rotation.z=-Math.PI*0.72;
+    box(g,0.007,0.22+tier*0.014,0.007,'#d8cfb0',0.17,0.25,0.07).rotation.z=-0.45;
+    for(let i=0;i<tier+1;i++)cone(g,0.013,0.05,tier===3?'#f2cf68':'#9fb88a',-0.09+i*0.025,0.47,-0.075,4);
+    if(tier>=2)for(const side of [-1,1]){const leaf=cone(g,0.025,0.13,'#6f9b57',side*0.055,0.48,0,5);leaf.rotation.z=-side*0.45;}
+  }else if(type==='berserker'){
+    /* Twin broad axes, red war paint and shoulder spikes grow heavier by tier. */
+    for(const side of [-1,1]){
+      const shaft=cyl(g,0.009,0.012,0.38,'#64432f',side*0.16,0.27,0.07,6);shaft.rotation.z=-side*0.18;
+      const blade=box(g,0.1+tier*0.012,0.105+tier*0.012,0.035,metal,side*0.205,0.45,0.07,glow);blade.rotation.z=side*0.22;
+      box(g,0.026,0.018,0.008,'#a52f29',side*0.038,0.345,0.069);
+      if(tier>=2)cone(g,0.023,0.11,metal,side*0.13,0.35,-0.005,5).rotation.z=-side*0.45;
+      if(tier===3)orb(g,0.038,'#ddd0ac',side*0.105,0.305,0.045);
+    }
+    if(tier===3)banner(g,-0.14,0.26,-0.09,'#a82f2b',0.52);
+  }else if(type==='cleric'){
+    const holy=['#e2c574','#f4dfa0','#fff0ad'][tier-1];
+    cyl(g,0.06,0.112,0.2,'#ded5b7',0,0.225,0,16);box(g,0.025,0.16,0.012,holy,0,0.24,0.09,glow);
+    smoothOrb(g,0.055+tier*0.007,holy,0.14,0.535,0,{emissive:holy,emissiveIntensity:1.2});
+    const halo=mesh(g,new THREE.TorusGeometry(0.085+tier*0.012,0.01,8,32),mat(holy,{emissive:holy,emissiveIntensity:1.2}),0,0.5,-0.025);halo.rotation.x=Math.PI/2;
+    if(tier>=2)for(let i=0;i<6;i++){const a=i*Math.PI/3;const ray=box(g,0.012,0.07,0.012,holy,Math.cos(a)*0.13,0.5+Math.sin(a)*0.13,-0.025,glow);ray.rotation.z=a-Math.PI/2;}
+    if(tier===3)for(const side of [-1,1])for(let i=0;i<3;i++){const wing=capsule(g,0.015,0.12,'#f3e9c7',side*(0.13+i*0.025),0.26+i*0.035,-0.1,glow);wing.rotation.z=side*(0.45+i*0.14);}
+  }else if(type==='necromancer'){
+    const soul=['#72bd83','#8cdb9b','#b3f2b8'][tier-1];
+    const crystal=mesh(g,new THREE.OctahedronGeometry(0.058),mat(soul,{emissive:soul,emissiveIntensity:1.5}),0.14,0.53,0);crystal.scale.y=1.35;
+    for(const side of [-1,1]){
+      smoothOrb(g,0.038+tier*0.005,'#c7c0a6',side*0.12,0.29,0.045);
+      for(const eye of [-1,1])orb(g,0.008,soul,side*0.12+eye*0.013,0.3,0.078,{emissive:soul,emissiveIntensity:1.3});
+      if(tier>=2)cone(g,0.024,0.15,'#4b4652',side*0.075,0.5,0,5).rotation.z=-side*0.5;
+    }
+    if(tier>=2)for(let i=0;i<tier;i++){const a=i*Math.PI*2/tier;const wisp=orb(g,0.025,soul,Math.cos(a)*0.17,0.43,Math.sin(a)*0.13,{emissive:soul,emissiveIntensity:1.5});animated.spinners.push({mesh:wisp,base:0.43,phase:a,speed:0.7});}
+    if(tier===3)cyl(g,0.083,0.083,0.028,'#4a4351',0,0.44,0,16);
+  }else if(type==='assassin'){
+    /* A dark hood, face wrap and paired narrow blades distinguish the infiltrator. */
+    cyl(g,0.06,0.1,0.19,'#353b43',0,0.225,0,14);cone(g,0.095,0.16,'#30343f',0,0.455,-0.01,14);
+    const wrap=smoothOrb(g,0.065,'#252932',0,0.335,0.02);wrap.scale.set(0.92,0.32,0.82);
+    for(const side of [-1,1]){
+      const dagger=blade(g,0.03,0.19+tier*0.025,metal,side*0.15,0.22,0.08,glow);dagger.rotation.z=-side*0.35;
+      box(g,0.075,0.018,0.025,'#6f5b48',side*0.15,0.105,0.08).rotation.z=-side*0.35;
+      if(tier>=2)cone(g,0.018,0.09,'#555d70',side*0.11,0.33,0,5).rotation.z=-side*0.55;
+    }
+    if(tier===3)for(let i=0;i<3;i++){const a=i*Math.PI*2/3;orb(g,0.022,'#8d85d8',Math.cos(a)*0.15,0.48,Math.sin(a)*0.1,{emissive:'#6757bb',emissiveIntensity:1.2});}
+  }
+  if(tier>=2)cyl(g,0.077,0.077,0.035,metal,0,0.435,0,16,glow);
+  if(tier===3)for(const side of [-1,0,1])cone(g,0.018,0.055,'#f0d583',side*0.048,0.475,0.005,4);
+  g.scale.setScalar(1.04+tier*0.025);g.userData.heroId=hero.id;g.userData.heroClass=type;g.userData.heroTier=tier;
   return g;
 }
 function lumberModel(g, b) {
@@ -1964,12 +2206,18 @@ function buildRoads() {
   }
   dirty.roads = false;
 }
-function buildBuildings() {
+function buildBuildings(resetWalkers = false) {
+  /* Construction must not restart every walker's route. Detach characters before
+     disposing the old scene, then reconcile only actual roster/model changes. */
+  const walkers=resetWalkers?[]:animated.walkers.slice(),roots=new Set(walkers.map(w=>w.g));
+  for(const w of walkers)fxG.remove(w.g);
+  const belongsToWalker=item=>{for(let p=item.mesh;p;p=p.parent)if(roots.has(p))return true;return false;};
+  const spinners=animated.spinners.filter(belongsToWalker),flags=animated.flags.filter(belongsToWalker),smoke=animated.smoke.filter(belongsToWalker);
   clearGroup(cityG); clearGroup(fxG);
-  animated.spinners.length = animated.flags.length = animated.smoke.length = animated.walkers.length = animated.ambient.length = 0;
+  animated.spinners=spinners;animated.flags=flags;animated.smoke=smoke;animated.walkers=walkers;animated.ambient=[];
   for (const b of allBuildings()) cityG.add(makeBuildingModel(b));
-  spawnWalkers();
-  spawnSoldiers();
+  for(const w of walkers)fxG.add(w.g);
+  syncWalkers();
   spawnAmbient();
   if ((realm.modifiers.wardUntil || 0) > realm.totalDays) spawnWardDome();
   updateSelection(); dirty.buildings = false;
@@ -1996,6 +2244,9 @@ function buildOverlay() {
 
 let hoverMeshes = [];
 let selectionLines = null;
+/* Reuse one outline instead of allocating and leaking GPU geometry on every click. */
+const selectionGeometry = new THREE.EdgesGeometry(new THREE.BoxGeometry(0.96,0.12,0.96));
+const selectionMaterial = new THREE.LineBasicMaterial({color:'#f4d483',transparent:true,opacity:0.95});
 function updateHover() {
   for (const m of hoverMeshes) overlayG.remove(m);
   hoverMeshes = [];
@@ -2012,42 +2263,66 @@ function updateHover() {
   }
 }
 function updateSelection() {
-  if (selectionLines) { overlayG.remove(selectionLines); selectionLines = null; }
-  if (!selectedTile) return;
+  if (!selectedTile) {
+    if (selectionLines) overlayG.remove(selectionLines);
+    return;
+  }
   const b = buildingAt(selectedTile.x,selectedTile.y), def = b ? BT[b.type] : null;
   const x = b ? b.x : selectedTile.x, y = b ? b.y : selectedTile.y, size = def ? def.size : 1;
   const h = T(x,y).h;
-  const geo = new THREE.EdgesGeometry(new THREE.BoxGeometry(size*0.96,0.12,size*0.96));
-  selectionLines = new THREE.LineSegments(geo,new THREE.LineBasicMaterial({color:'#f4d483',transparent:true,opacity:0.95}));
-  selectionLines.position.set(x-N/2+size/2,h+0.08,y-N/2+size/2); overlayG.add(selectionLines);
+  if (!selectionLines) selectionLines = new THREE.LineSegments(selectionGeometry,selectionMaterial);
+  selectionLines.scale.set(size,1,size);
+  selectionLines.position.set(x-N/2+size/2,h+0.08,y-N/2+size/2);
+  if (selectionLines.parent!==overlayG) overlayG.add(selectionLines);
 }
 
-function spawnWalkers() {
-  const roads = tiles.filter(t=>t.road&&!t.water);
-  if (!roads.length) return;
-  const rnd=mulberry32(seed+realm.population*17+allBuildings().length);
-  const count=Math.min(22,Math.max(5,Math.ceil(realm.population/3)));
-  for(let i=0;i<count;i++) {
-    const from=roads[Math.floor(rnd()*roads.length)], neighbours=roadNeighbors(from);
-    const to=neighbours.length?neighbours[Math.floor(rnd()*neighbours.length)]:from;
-    const g=new THREE.Group();
-    cone(g,0.055,0.17,['#8b5460','#4d7181','#797143','#725482'][i%4],0,0.085,0,7);
-    orb(g,0.04,'#d6b28c',0,0.2,0); cone(g,0.055,0.08,'#66513c',0,0.27,0,7);
-    g.scale.setScalar(0.85);fxG.add(g);
-    animated.walkers.push({g,from,to,t:rnd(),speed:0.18+rnd()*0.16});
-  }
+function walkerAnimationCleanup(w){
+  fxG.remove(w.g);
+  const belongs=item=>{for(let p=item.mesh;p;p=p.parent)if(p===w.g)return true;return false;};
+  animated.spinners=animated.spinners.filter(item=>!belongs(item));
+  animated.flags=animated.flags.filter(item=>!belongs(item));
+  animated.smoke=animated.smoke.filter(item=>!belongs(item));
+  clearGroup(w.g);
 }
-function spawnSoldiers() {
-  const roads=tiles.filter(t=>t.road&&!t.water);if(!roads.length)return;
+function syncWalkers(){
+  const roads=tiles.filter(t=>t.road&&!t.water),desired=[];
+  const villagerCount=Math.min(22,Math.max(5,Math.ceil(realm.population/3)));
+  for(let i=0;i<villagerCount;i++)desired.push({key:`villager:${i}`,kind:'villager',modelKey:'villager',index:i});
   const remaining=Object.fromEntries(UNIT_TYPES.map(u=>[u.id,realm.troops?.[u.id]||0])),roster=[];
   /* Round-robin keeps every recruited class visible even in a large garrison. */
   while(roster.length<Math.min(24,realm.soldiers))for(const unit of UNIT_TYPES)if(remaining[unit.id]>0&&roster.length<24){roster.push(unit.id);remaining[unit.id]--;}
-  const rnd=mulberry32(seed+realm.soldiers*131+allBuildings().length*7);
-  roster.forEach((type,i)=>{
-    const from=roads[Math.floor(rnd()*roads.length)],neighbours=roadNeighbors(from),to=neighbours.length?neighbours[Math.floor(rnd()*neighbours.length)]:from;
-    const g=soldierModel(type,i);fxG.add(g);
-    animated.walkers.push({g,from,to,t:rnd(),speed:0.12+rnd()*0.12,kind:'soldier'});
-  });
+  const ordinals={};
+  roster.forEach((type,i)=>{const ordinal=ordinals[type]||0;ordinals[type]=ordinal+1;desired.push({key:`soldier:${type}:${ordinal}`,kind:'soldier',type,modelKey:type,index:i});});
+  (realm.heroes||[]).slice(0,8).forEach((hero,i)=>desired.push({key:`hero:${hero.id}`,kind:'hero',type:hero.class,tier:hero.tier,modelKey:`${hero.class}:${hero.tier}`,index:i}));
+  const existing=new Map(animated.walkers.map(w=>[w.key,w])),used=new Set(),next=[];
+  const rnd=mulberry32(seed+allBuildings().length*17+animated.walkers.length*31);
+  function route(){const from=roads[Math.floor(rnd()*roads.length)],neighbours=roadNeighbors(from);return{from,to:neighbours.length?neighbours[Math.floor(rnd()*neighbours.length)]:from};}
+  for(const d of desired){
+    if(!roads.length)break;
+    let w=existing.get(d.key);
+    if(w&&w.modelKey===d.modelKey){
+      if(!w.from?.road||!w.to?.road){Object.assign(w,route());w.t=0;}
+      used.add(d.key);next.push(w);continue;
+    }
+    const previous=w;
+    if(w)walkerAnimationCleanup(w);
+    const current=previous&&previous.from?.road&&previous.to?.road?{from:previous.from,to:previous.to}:route();
+    let g;
+    if(d.kind==='villager'){
+      g=new THREE.Group();
+      cone(g,0.055,0.17,['#8b5460','#4d7181','#797143','#725482'][d.index%4],0,0.085,0,7);
+      orb(g,0.04,'#d6b28c',0,0.2,0);cone(g,0.055,0.08,'#66513c',0,0.27,0,7);
+      /* Match the soldiers' 0.28-high body and 0.14-high head. */
+      g.scale.setScalar(1.65);
+    }else if(d.kind==='soldier')g=soldierModel(d.type,d.index);
+    else g=heroModel({id:Number(d.key.split(':')[1]),class:d.type,tier:d.tier},d.index);
+    fxG.add(g);
+    w={...d,g,from:current.from,to:current.to,t:previous?.t??rnd(),speed:previous?.speed??(d.kind==='villager'?0.18+rnd()*0.16:d.kind==='soldier'?0.12+rnd()*0.12:0.1+rnd()*0.08)};
+    if(previous){g.position.copy(previous.g.position);g.rotation.copy(previous.g.rotation);}
+    used.add(d.key);next.push(w);
+  }
+  for(const [key,w] of existing)if(!used.has(key))walkerAnimationCleanup(w);
+  animated.walkers=next;
 }
 function roadNeighbors(t) {
   return [[1,0],[-1,0],[0,1],[0,-1]].map(([dx,dy])=>T(t.x+dx,t.y+dy)).filter(n=>n&&n.road&&!n.water);
@@ -2227,7 +2502,7 @@ function updateHoverAt(x, y, clientX, clientY) {
 function applyToolAt(t) {
   if (!t || !started || modalOpen()) return;
   if (tool === 'inspect') {
-    selectedTile = t; updateSelection(); showSurvey(t); soundEffect('select');
+    showSurvey(t); soundEffect('select');
   } else if (tool === 'road') {
     if (placeRoad(t.x,t.y)) { calculateStats(); updateHUD(); }
   } else if (tool === 'bulldoze') {
@@ -2273,7 +2548,7 @@ function bindWorldInput() {
   canvas.addEventListener('pointercancel',()=>{pointerState.down=false;canvas.style.cursor='crosshair';});
   canvas.addEventListener('pointerleave',()=>{if(!pointerState.down){hoverTile=null;updateHover();$('cursorTag').classList.add('hidden');}});
   canvas.addEventListener('wheel',e=>{
-    if(!started||modalOpen())return;e.preventDefault();view.dist=clamp(view.dist*Math.exp(e.deltaY*0.001),10,48);
+    if(!started||modalOpen())return;e.preventDefault();view.dist=clamp(view.dist*Math.exp(e.deltaY*0.001),ZOOM_MIN,ZOOM_MAX);
   },{passive:false});
   window.addEventListener('resize',resizeScene);
   window.addEventListener('keydown',e=>{
@@ -2287,8 +2562,8 @@ function bindWorldInput() {
     else if(k==='p'){closeWorldMap();openDrawer('magic');return;}
     else if(k==='i')setTool('inspect');else if(k==='r')setTool('road');else if(k==='b')setTool('bulldoze');
     else if(k==='g')toggleGrid();else if(k==='h')openDrawer('help');else if(k==='j')openDrawer('chronicle');
-    else if(k==='o')togglePhoto();else if(k==='+'||k==='=')view.dist=clamp(view.dist-3,10,48);
-    else if(k==='-')view.dist=clamp(view.dist+3,10,48);
+    else if(k==='o')togglePhoto();else if(k==='+'||k==='=')view.dist=clamp(view.dist-3,ZOOM_MIN,ZOOM_MAX);
+    else if(k==='-')view.dist=clamp(view.dist+3,ZOOM_MIN,ZOOM_MAX);
     else if(/^[1-6]$/.test(k))openCategory(CATEGORIES[Number(k)-1].id);
     else {
       const def=BUILDINGS.find(b=>b.hotkey&&b.hotkey.toLowerCase()===k&&!b.hidden);
@@ -2466,7 +2741,16 @@ function bindAudioControls(){
 
 let drawerType = null, traySignature = '', previewSeed = 18427;
 const icon = name => `<i data-lucide="${name}"></i>`;
-function refreshIcons() { if (window.lucide) lucide.createIcons(); }
+function refreshIcons(root) {
+  if (!window.lucide) return;
+  if (!root) { lucide.createIcons(); return; }
+  /* Dynamic panels only need their new placeholders converted, not every HUD icon. */
+  for (const el of root.querySelectorAll('i[data-lucide]')) {
+    const name=el.dataset.lucide,key=name.split('-').map(part=>part.charAt(0).toUpperCase()+part.slice(1)).join('');
+    if (!lucide.icons[key]) continue;
+    const svg=lucide.createElement(lucide.icons[key]);svg.setAttribute('data-lucide',name);el.replaceWith(svg);
+  }
+}
 function processNotices() {
   while(notices.length) {
     const n=notices.shift(),el=document.createElement('div');el.className=`toast ${n.kind}`;
@@ -2494,7 +2778,7 @@ function updateHUD() {
   $('foodRate').style.color=stats.foodRate<stats.foodUse?'var(--red)':'';
   $('manaText').textContent=fmt(realm.mana);$('manaRate').textContent=`${signed(stats.manaRate-stats.manaUse)} / day`;
   $('weaponsText').textContent=fmt(realm.weapons);$('materialsText').textContent=`${fmt(realm.wood)}w · ${fmt(realm.stone)}s · ${fmt(realm.iron)}i`;
-  $('materialsButton').title=`Armory · ${fmt(realm.wood)} lumber, ${fmt(realm.stone)} stone, ${fmt(realm.iron)} iron, ${fmt(realm.weapons)} weapons`;
+  $('materialsButton').title=`Armory · ${fmt(realm.wood)} lumber, ${fmt(realm.stone)} stone, ${fmt(realm.iron)} iron, ${fmt(realm.weapons)} weapons · ${fmt(realm.heroPoints)} hero points`;
   $('popText').textContent=fmt(realm.population);$('popCap').textContent=`${stats.housing} housing`;
   $('happyText').textContent=`${Math.round(realm.happiness)}%`;$('renownText').textContent=fmt(realm.renown);$('dateText').textContent=dateLabel();
   $('latestLogText').textContent=realm.log[0]?.text||'Your story awaits.';
@@ -2571,6 +2855,7 @@ function renderSurvey() {
     if(def.masonry)rows.push(['Stonecraft',`+${Math.round(def.masonry*100)}% quarry & mine output`]);
     if(def.diplomacy)rows.push(['Diplomacy','+4 envoy relations · +15% trade']);
     if(def.lore)rows.push(['Scholarship',`+${(def.lore*mul*2).toFixed(1)} renown`]);
+    if(def.hero)rows.push(['Hero points',`+${(def.hero*mul*(b.connected?1:.3)*(b.damaged?.45:1)*stats.jobFill).toFixed(2)} / day`]);
     if(def.radius)rows.push(['Reach',`${def.radius} tiles`]);
     if(def.defense)rows.push(['Defense',`${Math.round(def.defense*mul*(b.damaged?.35:1))}`]);
     if(def.armyCap)rows.push(['Garrison space',`${Math.floor(def.armyCap*(b.damaged?.5:1))}`]);
@@ -2585,7 +2870,7 @@ function renderSurvey() {
     const features=[];if(t.forest)features.push('Old woodland');if(t.crystal)features.push('Mana-rich crystal');if(t.rock)features.push('Rocky outcrop');if(t.water)features.push('Open water');
     body.innerHTML=`<div class="survey-title"><div class="survey-icon">${icon(t.water?'waves':t.crystal?'gem':t.forest?'trees':'mountain')}</div><div><h2>${features[0]||'Meadowland'}</h2><small>Tile ${t.x+1}, ${t.y+1}</small></div></div><p class="survey-desc">${t.crystal?'These crystals sing with old magic. Build a Mana Well within two tiles to attune it for a 35% bonus.':t.forest?'Old woodland can sustain a nearby Lumber Camp. Keep several forest tiles close together for a richer harvest.':t.rock?'This outcrop supports nearby Stone Quarries and Iron Mines. Build beside it rather than on top of it.':t.water?'Paths can cross water as timber bridges. Other buildings need dry land.':'Open ground for your next chapter. Clear woodland or build directly over it; rocky outcrops must remain.'}</p>${!t.water?`<div class="stat-row"><span>Elevation</span><b>${Math.round(t.h*12)} m</b></div>`:''}<div class="survey-actions"><button class="danger" data-survey="clear">${icon('hammer')} Clear ground</button></div>`;
   }
-  refreshIcons();
+  refreshIcons(body);
 }
 function closeDrawer(){$('drawer').classList.add('hidden');drawerType=null;}
 function openDrawer(type) {
@@ -2601,7 +2886,7 @@ function renderChronicle() {
   $('drawerBody').innerHTML=`<p class="save-note" style="margin:0 0 15px">The deeds, discoveries and turning points of ${realm.name}.</p>${realm.log.map(e=>`<article class="chronicle-entry ${e.kind}"><small>${e.date}</small><p>${e.text}</p></article>`).join('')}`;
 }
 function renderHelp() {
-  $('drawerBody').innerHTML=`<div class="drawer-section"><h3>YOUR FIRST HAMLET</h3><div class="drawer-copy"><p>Your keep, two cottages, a farm and a mana well are already standing. <b>Add cottages beside paths</b> and keep food production ahead of consumption.</p><p>Buildings with no path access work at <b>30% output</b>. Farms feed your people; markets and forges earn gold; wells power advanced arcana.</p></div></div><div class="drawer-section"><h3>RESOURCES & ARMS</h3><div class="drawer-copy"><p>Build <b>Lumber Camps near forests</b> and <b>Quarries or Iron Mines near rocky outcrops</b>. The Emberforge turns lumber and iron into weapons; open the <b>Armory</b> from the hammer in the top bar.</p><p>Militia need no equipment. Archers, knights and battlemages consume forged weapons when recruited and require specialized buildings.</p></div></div><div class="drawer-section"><h3>MAGIC & HAPPINESS</h3><div class="drawer-copy"><p>Mana wells and groves fill your arcane reserve. Open the <b>Spellbook (P)</b> to conjure harvests, raise a defensive Aegis, repair buildings, scout distant lands, charm rivals or cast Starfire.</p><p>Astral Spires unlock Starfire and reduce all spell costs. Crystal within two tiles <b>attunes a mana well</b>.</p></div></div><div class="drawer-section"><h3>THE WORLD & WAR</h3><div class="drawer-copy"><p>Open the <b>Atlas (X)</b>: your capital is fixed at the center of a 25×25 world. Click cells to scout, send envoys and establish trade roads.</p><p>Hostile cities march after a warning of several days. Recruit soldiers and build Warden Lodges, Watchtowers and Barracks. A failed siege steals supplies and damages buildings; repair them from their survey or with Mending Light.</p></div></div><div class="drawer-section"><h3>CAMERA & TOOLS</h3><div class="drawer-copy"><ul><li><kbd>W A S D</kbd> pan · <kbd>Q E</kbd> rotate · wheel zoom</li><li>Middle-drag or right-drag to pan · right-click to inspect</li><li><kbd>1–6</kbd> open build trays · letter keys select tools</li><li><kbd>Space</kbd> pause · <kbd>X</kbd> atlas · <kbd>P</kbd> spells</li><li><kbd>Ctrl S</kbd> save · <kbd>J</kbd> chronicle · <kbd>Esc</kbd> close</li></ul></div></div><div class="drawer-section"><h3>YOUR LEGEND</h3><div class="drawer-copy"><p>Population raises your permanent <b>Realm Level</b>: Hamlet at 12, Village at 24, Town at 45, City at 70 and Kingdom at 100. Each level unlocks detailed new buildings.</p><p>Follow the founding quests from your first hearths to spellcraft and war. Grow to 65 villagers and 70 renown to raise a High Castle; a mighty realm may one day bond a dragon.</p><p>Every moon your game autosaves in this browser. Export a file from Realm Files to keep a copy elsewhere.</p></div></div>`;
+  $('drawerBody').innerHTML=`<div class="drawer-section"><h3>GUIDED TUTORIAL</h3><div class="drawer-copy"><p>Learn by founding and growing a real settlement. Seven lessons cover inspection, paths, homes, food, lumber, time and the Strategic Atlas. Your lesson progress saves with this realm.</p><button class="tutorial-primary" data-tutorial="${realm.tutorial?.active?'resume':'start'}">${realm.tutorial?.active?'Resume tutorial':realm.tutorial?.completed?'Replay tutorial':'Start tutorial'}</button></div></div><div class="drawer-section"><h3>YOUR FIRST HAMLET</h3><div class="drawer-copy"><p>Your keep, two cottages, a farm and a mana well are already standing. <b>Add cottages beside paths</b> and keep food production ahead of consumption.</p><p>Buildings with no path access work at <b>30% output</b>. Farms feed your people; markets and forges earn gold; wells power advanced arcana.</p></div></div><div class="drawer-section"><h3>RESOURCES & ARMS</h3><div class="drawer-copy"><p>Build <b>Lumber Camps near forests</b> and <b>Quarries or Iron Mines near rocky outcrops</b>. The Emberforge turns lumber and iron into weapons; open the <b>Armory</b> from the hammer in the top bar.</p><p>Militia need no equipment. Archers, knights and battlemages consume forged weapons when recruited and require specialized buildings.</p></div></div><div class="drawer-section"><h3>MAGIC & HAPPINESS</h3><div class="drawer-copy"><p>Mana wells and groves fill your arcane reserve. Open the <b>Spellbook (P)</b> to conjure harvests, raise a defensive Aegis, repair buildings, scout distant lands, charm rivals or cast Starfire.</p><p>Astral Spires unlock Starfire and reduce all spell costs. Crystal within two tiles <b>attunes a mana well</b>.</p></div></div><div class="drawer-section"><h3>THE WORLD & WAR</h3><div class="drawer-copy"><p>Open the <b>Atlas (X)</b>: your capital is fixed at the center of a 25×25 world. Click cells to scout, send envoys and establish trade roads.</p><p>Hostile cities march after a warning of several days. Recruit soldiers and build Warden Lodges, Watchtowers and Barracks. A failed siege steals supplies and damages buildings; repair them from their survey or with Mending Light.</p></div></div><div class="drawer-section"><h3>CAMERA & TOOLS</h3><div class="drawer-copy"><ul><li><kbd>W A S D</kbd> pan · <kbd>Q E</kbd> rotate · wheel zoom</li><li>Middle-drag or right-drag to pan · right-click to inspect</li><li><kbd>1–6</kbd> open build trays · letter keys select tools</li><li><kbd>Space</kbd> pause · <kbd>X</kbd> atlas · <kbd>P</kbd> spells</li><li><kbd>Ctrl S</kbd> save · <kbd>J</kbd> chronicle · <kbd>Esc</kbd> close</li></ul></div></div><div class="drawer-section"><h3>YOUR LEGEND</h3><div class="drawer-copy"><p>Population raises your permanent <b>Realm Level</b>: Hamlet at 12, Village at 24, Town at 45, City at 70 and Kingdom at 100. Each level unlocks detailed new buildings.</p><p>Follow the founding quests from your first hearths to spellcraft and war. Grow to 65 villagers and 70 renown to raise a High Castle; a mighty realm may one day bond a dragon.</p><p>Every moon your game autosaves in this browser. Export a file from Realm Files to keep a copy elsewhere.</p></div></div>`;
 }
 function renderSave() {
   $('drawerBody').innerHTML=`<div class="drawer-section"><h3>${realm.name.toUpperCase()}</h3><div class="stat-row"><span>Founded</span><b>Year ${realm.year}</b></div><div class="stat-row"><span>Population</span><b>${realm.population}</b></div><div class="stat-row"><span>World seed</span><b>${seed}</b></div><div class="stat-row"><span>Garrison / defense</span><b>${realm.soldiers} / ${stats.defense}</b></div></div><div class="save-actions"><button data-save="now">${icon('save')} Save now</button><button data-save="export">${icon('download')} Export</button><button data-save="import">${icon('upload')} Import</button><button data-save="new">${icon('map')} New realm</button></div><p class="save-note">Autosaves happen every game moon and when you leave. Exported JSON files include the whole realm and can be imported in any modern browser.</p><div class="drawer-section audio-settings"><h3>AUDIO & MUSIC</h3><div class="save-actions"><button data-audio="music">${icon(musicOn?'music':'music-2')} Music ${musicOn?'on':'off'}</button><button data-audio="sound">${icon(soundOn?'volume-2':'volume-x')} Effects ${soundOn?'on':'off'}</button></div><p class="save-note">The generative score and all effects are synthesized locally. Preferences are remembered in this browser.</p></div>`;refreshIcons();
@@ -2626,12 +2911,13 @@ function openSplash(){
   $('btnResume').classList.toggle('hidden',!started);$('btnContinue').classList.toggle('hidden',!localStorage.getItem(SAVE_KEY));
   $('realmNameInput').value=realm?.name||'Elderglen';updatePreview();refreshIcons();
 }
-function closeSplash(){$('splash').classList.add('gone');document.body.classList.remove('modal-open');}
-function startNewGame(){
+function closeSplash(){stopHeroShowcase();$('splash').classList.add('gone');document.body.classList.remove('modal-open');}
+function startNewGame(withTutorial=false){
   foundRealm($('realmNameInput').value,Number($('sizeSelect').value),previewSeed,$('difficultySelect').value);
   closeWorldMap(false);
   view.dist=23;view.sd=Math.min(view.sd,27);
   rebuildWorld();started=true;closeDrawer();closeSplash();setSpeed(1);initAudio();soundEffect('found');activeCategory='settlement';tool='inspect';renderCategories();setTool('inspect');updateHUD();
+  if(withTutorial)startTutorial();
   notify(`Welcome to ${realm.name}. Your founding charter awaits.`,'good','crown');saveGame(true);
 }
 function exportSave(){
@@ -2657,18 +2943,18 @@ function bindUI(){
   $('minimap').addEventListener('pointerdown',e=>{const r=e.target.getBoundingClientRect();focusTile((e.clientX-r.left)/r.width*N,(e.clientY-r.top)/r.height*N);dirty.minimap=true;});
   $('mmToggle').addEventListener('click',()=>$('minimapWrap').classList.toggle('collapsed'));
   $('questToggle').addEventListener('click',()=>$('questCard').classList.toggle('collapsed'));
-  $('btnGrid').addEventListener('click',toggleGrid);$('btnZoomIn').addEventListener('click',()=>view.dist=clamp(view.dist-3,10,48));$('btnZoomOut').addEventListener('click',()=>view.dist=clamp(view.dist+3,10,48));
+  $('btnGrid').addEventListener('click',toggleGrid);$('btnZoomIn').addEventListener('click',()=>view.dist=clamp(view.dist-3,ZOOM_MIN,ZOOM_MAX));$('btnZoomOut').addEventListener('click',()=>view.dist=clamp(view.dist+3,ZOOM_MIN,ZOOM_MAX));
   $('btnRotate').addEventListener('click',()=>view.theta+=Math.PI/2);$('btnHome').addEventListener('click',()=>{const k=allBuildings().find(b=>b.type==='keep');focusTile(k?k.x:N/2,k?k.y:N/2,22);});
   $('btnPhoto').addEventListener('click',togglePhoto);$('btnPhotoExit').addEventListener('click',togglePhoto);
   $('btnTime').addEventListener('click',()=>{timeOfDay=(timeOfDay+0.22)%1;});
   $('btnSnapshot').addEventListener('click',()=>{renderer.render(scene,camera);renderer.domElement.toBlob(blob=>{if(!blob)return;const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`${realm.name.toLowerCase()}-postcard.png`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);},'image/png');});
   $('btnNew').addEventListener('click',openSplash);$('btnResume').addEventListener('click',()=>{closeSplash();setSpeed(previousSpeed||1);});
-  $('btnContinue').addEventListener('click',loadSavedRealm);$('btnStart').addEventListener('click',startNewGame);
+  $('btnContinue').addEventListener('click',loadSavedRealm);$('btnStart').addEventListener('click',()=>startNewGame());$('btnTutorial').addEventListener('click',()=>startNewGame(true));
   $('btnNameDice').addEventListener('click',()=>{$('realmNameInput').value=randomRealmName();});
   $('btnReroll').addEventListener('click',()=>{$('seedInput').value=Math.floor(Math.random()*999999);updatePreview();});
   $('seedInput').addEventListener('change',updatePreview);$('sizeSelect').addEventListener('change',updatePreview);
   window.addEventListener('pagehide',()=>saveGame(true));
-  bindStrategyUI();bindAudioControls();
+  bindStrategyUI();bindAudioControls();bindTutorial();
 }
 
 </script>
@@ -2737,7 +3023,7 @@ function renderWorldPanel() {
   const cities=strategicCities(),discovered=cities.filter(c=>strategicCell(c.x,c.y).discovered).length;
   $('worldSummary').textContent=`${discovered} / ${cities.length} settlements known`;
   const incoming=[...worldState.armies].sort((a,b)=>a.arrival-b.arrival);
-  $('warOverview').innerHTML=`<div class="atlas-section"><h3>THE WAR COUNCIL</h3><div class="metric-grid"><div class="metric"><small>Garrison</small><b>${realm.soldiers} / ${stats.armyCap}</b></div><div class="metric"><small>Total defense</small><b>${stats.defense}</b></div></div><div class="army-roster">${UNIT_TYPES.map(u=>`<span>${icon(u.icon)} ${u.name}<b>${realm.troops?.[u.id]||0}</b></span>`).join('')}</div><div class="atlas-actions recruit-actions">${worldActionButton('recruit','Recruit militia','shield',realm.soldiers>=stats.armyCap)}${worldActionButton('armory','Open Armory','hammer')}</div>${(realm.modifiers.wardUntil||0)>realm.totalDays?`<div class="ward-active">${icon('shield-plus')} Aegis active · ${realm.modifiers.wardUntil-realm.totalDays} days</div>`:''}</div><div class="atlas-section"><h3>INCOMING ARMIES</h3>${incoming.length?incoming.map(a=>{const city=armyOrigin(a);return `<button class="incoming-army" data-select-city="${city?.id??-1}"><span><b>${htmlEscape(city?.name||'Unknown host')}</b><small>${a.units} soldiers · arrives in ${Math.max(0,a.arrival-realm.totalDays)} days</small></span><i data-lucide="chevron-right"></i></button>`;}).join(''):'<p class="atlas-muted">No rival armies are marching. Hostile settlements may attack as your renown grows.</p>'}</div>`;
+  $('warOverview').innerHTML=`<div class="atlas-section"><h3>THE WAR COUNCIL</h3><div class="metric-grid"><div class="metric"><small>Garrison</small><b>${realm.soldiers} / ${stats.armyCap}</b></div><div class="metric"><small>Total defense</small><b>${stats.defense}</b></div></div><div class="army-roster">${UNIT_TYPES.map(u=>`<span>${icon(u.icon)} ${u.name}<b>${realm.troops?.[u.id]||0}</b></span>`).join('')}<span>${icon('crown')} Heroes<b>${realm.heroes?.length||0}</b></span></div><div class="atlas-actions recruit-actions">${worldActionButton('recruit','Recruit militia','shield',realm.soldiers>=stats.armyCap)}${worldActionButton('armory','Open Armory','hammer')}</div>${(realm.modifiers.wardUntil||0)>realm.totalDays?`<div class="ward-active">${icon('shield-plus')} Aegis active · ${realm.modifiers.wardUntil-realm.totalDays} days</div>`:''}</div><div class="atlas-section"><h3>INCOMING ARMIES</h3>${incoming.length?incoming.map(a=>{const city=armyOrigin(a);return `<button class="incoming-army" data-select-city="${city?.id??-1}"><span><b>${htmlEscape(city?.name||'Unknown host')}</b><small>${a.units} soldiers · arrives in ${Math.max(0,a.arrival-realm.totalDays)} days</small></span><i data-lucide="chevron-right"></i></button>`;}).join(''):'<p class="atlas-muted">No rival armies are marching. Hostile settlements may attack as your renown grows.</p>'}</div>`;
   const cell=selectedStrategicCell(),city=cell.city;
   let content=`<div class="atlas-section selected-region"><small>ATLAS CELL (${cell.x}, ${cell.y})</small>`;
   if(city?.player){
@@ -2753,15 +3039,23 @@ function renderWorldPanel() {
   $('worldPanel').innerHTML=content+'</div>';
   drawWorldMap();refreshIcons();
 }
+let selectedHeroClass = 'warrior';
 function renderArmory() {
   calculateStats();
   const resources=[
-    {id:'wood',name:'Lumber',icon:'trees',rate:stats.woodRate-stats.woodUse,note:'Lumber Camps near forests'},
-    {id:'stone',name:'Stone',icon:'mountain',rate:stats.stoneRate,note:'Quarries and mines near rock'},
-    {id:'iron',name:'Iron',icon:'axe',rate:stats.ironRate-stats.ironUse,note:'Iron Mines near rocky outcrops'},
-    {id:'weapons',name:'Weapons',icon:'swords',rate:stats.weaponRate,note:'Emberforges use lumber + iron'},
+    {id:'wood',name:'Lumber',icon:'trees',rate:stats.woodRate-stats.woodUse},
+    {id:'stone',name:'Stone',icon:'mountain',rate:stats.stoneRate},
+    {id:'iron',name:'Iron',icon:'axe',rate:stats.ironRate-stats.ironUse},
+    {id:'weapons',name:'Weapons',icon:'swords',rate:stats.weaponRate},
   ];
-  $('drawerBody').innerHTML=`<div class="drawer-section"><h3>THE ROYAL STOCKPILE</h3><div class="stockpile-grid">${resources.map(r=>`<div class="stockpile-item">${icon(r.icon)}<div><small>${r.name}</small><b>${fmt(realm[r.id])}</b><span class="${r.rate<0?'warn':''}">${signed(r.rate)} / day</span></div></div>`).join('')}</div><p class="save-note">Extraction buildings must stand within two tiles of their natural feature. Forges consume 1.4 lumber + 0.7 iron per 0.65 weapons; shortages slow them down.</p>${stats.weaponPotential>stats.weaponRate+0.01?`<div class="production-warning">${icon('alert-triangle')} Material shortage: forges are working at ${Math.round(stats.craftFactor*100)}% speed.</div>`:''}</div><div class="drawer-section"><h3>THE GARRISON · ${realm.soldiers} / ${stats.armyCap}</h3>${UNIT_TYPES.map(unit=>{const available=unitAvailability(unit.id),count=realm.troops[unit.id]||0;return `<article class="unit-card"><div class="unit-card-head"><span>${icon(unit.icon)}</span><div><h3>${unit.name}</h3><small>${count} sworn · ${unit.defense.toFixed(1)} defense each</small></div><b>${count}</b></div><p>${unit.desc}</p><div class="unit-card-foot"><span>${unitCostText(unit)}</span><button data-recruit="${unit.id}" ${!available.ok?'disabled':''} title="${htmlEscape(available.reason)}">${icon('plus')} Recruit</button></div>${!available.ok?`<small class="unit-unavailable">${htmlEscape(available.reason)}</small>`:''}</article>`;}).join('')}</div>`;
+  const cost=heroCost(),available=heroAvailability(),heroClass=HERO_CLASSES[selectedHeroClass];
+  const heroGenerators=BUILDINGS.filter(def=>def.hero).map(def=>def.name).join(', ');
+  const classPicker=Object.entries(HERO_CLASSES).map(([id,def])=>`<button class="${selectedHeroClass===id?'on':''}" data-hero-class="${id}" title="${def.tiers.join(' → ')}">${icon(def.icon)}<span>${def.name}</span></button>`).join('');
+  const heroes=realm.heroes.map(hero=>{
+    const def=HERO_CLASSES[hero.class],rank=def.tiers[hero.tier-1],upgrade=heroUpgradeCost(hero),maxed=hero.tier>=3,canUpgrade=!maxed&&realm.heroPoints>=upgrade;
+    return `<article class="unit-card hero-card hero-tier-${hero.tier}" data-hero-card="${hero.id}"><div class="unit-card-head"><span>${icon(def.icon)}</span><div><h3>${htmlEscape(hero.name)}</h3><small>${htmlEscape(hero.title)} · ${rank}</small></div><b>${['I','II','III'][hero.tier-1]}</b></div><div class="unit-card-foot"><span>Tier ${['I','II','III'][hero.tier-1]} · ${heroDefense(hero)} defense${maxed?' · HIGHEST FORM':` → ${def.tiers[hero.tier]}`}</span><button data-hero-upgrade="${hero.id}" ${!canUpgrade?'disabled':''} title="${maxed?'Highest hero tier':`Upgrade for ${upgrade} hero points`}">${maxed?icon('crown'):icon('arrow-up')} ${maxed?'Max':upgrade}</button></div></article>`;
+  }).join('');
+  $('drawerBody').innerHTML=`<div class="drawer-section"><h3>HEROES OF THE REALM · ${realm.heroes.length}</h3><div class="metric-grid"><div class="metric"><small>Hero points</small><b>${realm.heroPoints.toFixed(1)}</b></div><div class="metric"><small>Points / day</small><b>+${stats.heroRate.toFixed(2)}</b></div></div><div class="hero-class-picker">${classPicker}</div><article class="unit-card hero-recruit"><div class="unit-card-head"><span>${icon(heroClass.icon)}</span><div><h3>Call ${/^[aeiou]/i.test(heroClass.name)?'an':'a'} ${heroClass.name}</h3><small>Tier I · +${HERO_DEFENSE} defense · no garrison space</small></div><b>${cost}</b></div><p>${heroClass.desc}</p><p class="hero-path">${heroClass.tiers.join(' → ')}</p><p>Recruitment doubles each time: 10, 20, 40, 80 and beyond. Upgrades cost 20 then 40 points.</p><div class="unit-card-foot"><span>${available.ok?'READY TO ANSWER THE CALL':htmlEscape(available.reason)}</span><button data-hero-recruit ${!available.ok?'disabled':''} title="${htmlEscape(available.reason)}">${icon('plus')} Recruit ${heroClass.name.toLowerCase()}</button></div></article>${heroes||`<p class="save-note">No heroes have joined yet. Points come from the ${heroGenerators}.</p>`}</div><div class="drawer-section"><h3>THE ROYAL STOCKPILE</h3><div class="stockpile-grid">${resources.map(r=>`<div class="stockpile-item">${icon(r.icon)}<div><small>${r.name}</small><b>${fmt(realm[r.id])}</b><span class="${r.rate<0?'warn':''}">${signed(r.rate)} / day</span></div></div>`).join('')}</div><p class="save-note">Extraction buildings must stand within two tiles of their natural feature. Forges consume 1.4 lumber + 0.7 iron per 0.65 weapons; shortages slow them down.</p>${stats.weaponPotential>stats.weaponRate+0.01?`<div class="production-warning">${icon('alert-triangle')} Material shortage: forges are working at ${Math.round(stats.craftFactor*100)}% speed.</div>`:''}</div><div class="drawer-section"><h3>THE GARRISON · ${realm.soldiers} / ${stats.armyCap}</h3>${UNIT_TYPES.map(unit=>{const available=unitAvailability(unit.id),count=realm.troops[unit.id]||0;return `<article class="unit-card"><div class="unit-card-head"><span>${icon(unit.icon)}</span><div><h3>${unit.name}</h3><small>${count} sworn · ${unit.defense.toFixed(1)} defense each</small></div><b>${count}</b></div><p>${unit.desc}</p><div class="unit-card-foot"><span>${unitCostText(unit)}</span><button data-recruit="${unit.id}" ${!available.ok?'disabled':''} title="${htmlEscape(available.reason)}">${icon('plus')} Recruit</button></div>${!available.ok?`<small class="unit-unavailable">${htmlEscape(available.reason)}</small>`:''}</article>`;}).join('')}</div>`;
   refreshIcons();
 }
 function renderMagic() {
@@ -2799,7 +3093,281 @@ function bindStrategyUI() {
     else if(action)performWorldAction(action.dataset.world);
     else if(origin){const city=strategicCities().find(c=>c.id===Number(origin.dataset.selectCity));if(city){selectStrategicCell(city.x,city.y);renderWorldPanel();}}
   });
-  $('drawer').addEventListener('click',e=>{const spell=e.target.closest('[data-spell]'),recruit=e.target.closest('[data-recruit]');if(spell){castSpell(spell.dataset.spell);renderMagic();updateHUD();processNotices();}else if(recruit){recruitSoldiers(1,recruit.dataset.recruit);updateHUD();processNotices();}});
+  $('drawer').addEventListener('click',e=>{
+    const spell=e.target.closest('[data-spell]'),recruit=e.target.closest('[data-recruit]'),hero=e.target.closest('[data-hero-recruit]');
+    const heroClass=e.target.closest('[data-hero-class]'),upgrade=e.target.closest('[data-hero-upgrade]');
+    if(spell){castSpell(spell.dataset.spell);renderMagic();updateHUD();processNotices();}
+    else if(recruit){recruitSoldiers(1,recruit.dataset.recruit);updateHUD();processNotices();}
+    else if(heroClass){selectedHeroClass=heroClass.dataset.heroClass;renderArmory();}
+    else if(hero){recruitHero(selectedHeroClass);renderArmory();updateHUD();processNotices();}
+    else if(upgrade){upgradeHero(upgrade.dataset.heroUpgrade);renderArmory();updateHUD();processNotices();}
+  });
+}
+
+</script>
+<script data-source="js/ui/tutorial.js">
+'use strict';
+
+const TUTORIAL_STEPS = [
+  {
+    id: 'inspect', title: 'Meet your Ancestral Keep',
+    text: 'Your keep is the heart of the realm. Select it on the island to open its land survey.',
+    tip: 'Look for the largest building beside the founding cottages.',
+    action: 'Focus the keep', focus: ['[data-tool="inspect"]'],
+    act() { setTool('inspect'); const keep = allBuildings().find(b => b.type === 'keep'); if (keep) focusTile(keep.x, keep.y, 16); },
+    done() { const b = selectedTile && buildingAt(selectedTile.x, selectedTile.y); return !!b && b.type === 'keep' && !$('survey').classList.contains('hidden'); },
+  },
+  {
+    id: 'road', title: 'Lay a stone path',
+    text: 'Paths connect your settlement. Choose Path, then click or drag across an open tile to add a new stone path.',
+    tip: 'Paths cost 12 gold on land. Drag over water to build a timber bridge.',
+    action: 'Select the Path tool', focus: ['[data-tool="road"]'],
+    act() { setTool('road'); }, done() { return stats.roads > (realm.tutorial.roads || 0); },
+  },
+  {
+    id: 'cottage', title: 'Raise a connected cottage',
+    text: 'Open Settlement, choose Cottage, and build beside any path. A connected cottage can welcome new villagers.',
+    tip: 'The placement outline turns red when a site is blocked or too costly.',
+    action: 'Choose a Cottage', focus: ['[data-build="cottage"]', '[data-category="settlement"]'],
+    act() { setTool('cottage'); },
+    done() { return allBuildings().some(b => b.id > realm.tutorial.maxBuildingId && b.type === 'cottage' && b.connected); },
+  },
+  {
+    id: 'farm', title: 'Grow food for your people',
+    text: 'Build a new Sunfield Farm beside a path. Connected farms produce enough food to support a growing hamlet.',
+    tip: 'Check the food balance in the top bar as your population grows.',
+    action: 'Choose a Sunfield Farm', focus: ['[data-build="farm"]', '[data-category="settlement"]'],
+    act() { setTool('farm'); },
+    done() { return allBuildings().some(b => b.id > realm.tutorial.maxBuildingId && b.type === 'farm' && b.connected); },
+  },
+  {
+    id: 'lumber', title: 'Harvest the woodland',
+    text: 'Build a Lumber Camp within two tiles of old woodland, preferably beside a path. It supplies lumber for buildings and equipment.',
+    tip: 'Forest tiles around the camp increase its daily lumber output.',
+    action: 'Choose a Lumber Camp', focus: ['[data-build="lumber"]', '[data-category="craft"]'],
+    act() { setTool('lumber'); },
+    done() { return allBuildings().some(b => b.id > realm.tutorial.maxBuildingId && b.type === 'lumber' && b.connected); },
+  },
+  {
+    id: 'time', title: 'Let your realm live',
+    text: 'Start time at normal speed and let two full days pass. Watch your resources, villagers and founding quests respond.',
+    tip: 'Space pauses or resumes time. You can also choose 2× or 4× speed.',
+    action: 'Start time at 1×', focus: ['[data-speed="1"]'],
+    act() { setSpeed(1); }, done() { return realm.totalDays >= realm.tutorial.stepDay + 2; },
+  },
+  {
+    id: 'atlas', title: 'Discover the known world',
+    text: 'Open the Strategic Atlas. Beyond your island are rival cities, diplomatic opportunities and incoming armies.',
+    tip: 'The atlas pauses local time. Press X again or use its close button to return.',
+    action: 'Open the Strategic Atlas', focus: ['#btnAtlas'],
+    act() { openWorldMap(); }, done() { return worldMapOpen(); },
+  },
+];
+let tutorialRenderKey = '', tutorialFocusKey = '';
+
+function tutorialValid(t) {
+  return t && Number.isInteger(t.step) && t.step >= 0 && t.step < TUTORIAL_STEPS.length &&
+    Number.isFinite(t.roads) && Number.isFinite(t.maxBuildingId) && Number.isFinite(t.stepDay);
+}
+function clearTutorialFocus() {
+  document.querySelectorAll('.tutorial-focus').forEach(el => el.classList.remove('tutorial-focus'));
+  tutorialFocusKey = '';
+}
+function startTutorial() {
+  realm.tutorial = { active: true, step: 0, minimized: false, completed: false,
+    roads: stats.roads, maxBuildingId: nextBuildingId - 1, stepDay: realm.totalDays };
+  tutorialRenderKey = ''; clearTutorialFocus(); closeDrawer(); setSpeed(0); saveRequested = true; updateTutorial();
+}
+function advanceTutorial() {
+  const t = realm.tutorial;
+  if (!t || !t.active) return;
+  if (t.step >= TUTORIAL_STEPS.length - 1) { completeTutorial(); return; }
+  t.step++; t.stepDay = realm.totalDays; tutorialRenderKey = ''; saveRequested = true;
+  setSpeed(0);
+  notify(`Lesson ${t.step + 1}: ${TUTORIAL_STEPS[t.step].title}`, 'news', 'graduation-cap');
+}
+function completeTutorial() {
+  if (!realm.tutorial) return;
+  realm.tutorial.active = false; realm.tutorial.minimized = false; realm.tutorial.completed = true;
+  clearTutorialFocus(); saveRequested = true; setSpeed(1);
+  notify('Tutorial complete. Your realm is yours to shape!', 'good', 'graduation-cap');
+}
+function minimizeTutorial() {
+  if (!realm.tutorial?.active) return;
+  realm.tutorial.minimized = true; clearTutorialFocus(); setSpeed(0); saveRequested = true; updateTutorial();
+}
+function resumeTutorial() {
+  if (!realm.tutorial?.active) { startTutorial(); return; }
+  realm.tutorial.minimized = false; closeDrawer(); saveRequested = true; updateTutorial();
+}
+function performTutorialAction() {
+  const t = realm.tutorial;
+  if (!t?.active || t.minimized) return;
+  TUTORIAL_STEPS[t.step].act(); updateTutorial();
+}
+function bindTutorial() {
+  document.addEventListener('click', e => {
+    const button = e.target.closest('[data-tutorial]'); if (!button) return;
+    const action = button.dataset.tutorial;
+    if (action === 'action') performTutorialAction();
+    else if (action === 'skip-step') advanceTutorial();
+    else if (action === 'skip') completeTutorial();
+    else if (action === 'hide') minimizeTutorial();
+    else if (action === 'resume') resumeTutorial();
+    else if (action === 'start') startTutorial();
+  });
+}
+function updateTutorial() {
+  const panel = $('tutorialPanel'), launcher = $('tutorialLauncher'), t = realm?.tutorial;
+  if (!started || !t?.active || !tutorialValid(t)) {
+    panel.classList.add('hidden'); launcher.classList.add('hidden'); clearTutorialFocus(); return;
+  }
+  const step = TUTORIAL_STEPS[t.step];
+  if (step.done()) { advanceTutorial(); return updateTutorial(); }
+  if (step.id !== 'time' && (speed > 0 || running)) setSpeed(0);
+  panel.classList.toggle('hidden', t.minimized); launcher.classList.toggle('hidden', !t.minimized);
+  const key = `${t.step}/${t.minimized}`;
+  if (key !== tutorialRenderKey) {
+    tutorialRenderKey = key;
+    $('tutorialStepLabel').textContent = `LESSON ${t.step + 1} OF ${TUTORIAL_STEPS.length}`;
+    $('tutorialBar').style.width = `${(t.step + 1) / TUTORIAL_STEPS.length * 100}%`;
+    $('tutorialTitle').textContent = step.title; $('tutorialText').textContent = step.text;
+    $('tutorialTip').textContent = step.tip; $('tutorialAction').textContent = step.action;
+  }
+  const focusKey = `${t.step}/${tool}/${activeCategory}/${traySignature}/${t.minimized}`;
+  if (focusKey !== tutorialFocusKey) {
+    clearTutorialFocus();
+    if (!t.minimized) for (const selector of step.focus) {
+      const el = document.querySelector(selector);
+      if (el && !el.closest('.hidden')) { el.classList.add('tutorial-focus'); break; }
+    }
+    tutorialFocusKey = focusKey;
+  }
+}
+
+</script>
+<script data-source="js/ui/showcase.js">
+'use strict';
+
+const HERO_SHOWCASE_IDLE_MS = 5 * 60 * 1000;
+const HERO_SHOWCASE_SLIDE_MS = 6500;
+const HERO_SHOWCASE_ROLES = {
+  warrior: 'FRONT-LINE CHAMPION',
+  knight: 'OATHBOUND PROTECTOR',
+  mage: 'ARCANE SPELLCASTER',
+  ranger: 'WOODLAND MARKSMAN',
+  berserker: 'TWIN-AXE VANGUARD',
+  cleric: 'RADIANT SUPPORTER',
+  necromancer: 'FORBIDDEN SPELLCASTER',
+  assassin: 'STEALTHY INFILTRATOR',
+};
+let heroShowcaseLastActivity = performance.now();
+let heroShowcaseActive = false, heroShowcaseIndex = 0, heroShowcaseSlideElapsed = 0, heroShowcaseIdleTimer = null;
+let heroShowcaseRenderer = null, heroShowcaseScene = null, heroShowcaseCamera = null, heroShowcaseModel = null;
+
+function initHeroShowcase() {
+  if (heroShowcaseRenderer) return;
+  const canvas = $('heroShowcaseCanvas');
+  heroShowcaseRenderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !LOW_GFX, preserveDrawingBuffer: true });
+  heroShowcaseRenderer.setPixelRatio(LOW_GFX ? 1 : Math.min(devicePixelRatio || 1, 1.5));
+  heroShowcaseRenderer.toneMapping = THREE.ACESFilmicToneMapping;
+  heroShowcaseRenderer.toneMappingExposure = 1.08;
+  heroShowcaseRenderer.outputColorSpace = THREE.SRGBColorSpace;
+  heroShowcaseScene = new THREE.Scene();
+  heroShowcaseCamera = new THREE.PerspectiveCamera(32, 1, 0.1, 20);
+  heroShowcaseCamera.position.set(0.9, 0.72, 1.45);
+  heroShowcaseCamera.lookAt(0, 0.27, 0);
+  heroShowcaseScene.add(new THREE.HemisphereLight('#f3ead5', '#263c35', 2.1));
+  const key = new THREE.DirectionalLight('#ffe0a0', 3.2); key.position.set(-2, 4, 3); heroShowcaseScene.add(key);
+  const rim = new THREE.DirectionalLight('#9cb9e5', 1.5); rim.position.set(2, 2, -3); heroShowcaseScene.add(rim);
+  const pedestal = new THREE.Mesh(new THREE.CylinderGeometry(0.31, 0.37, 0.055, 32), mat('#344a43'));
+  pedestal.position.y = -0.035; heroShowcaseScene.add(pedestal);
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.32, 0.009, 6, 40), mat('#d8b76c', { emissive: '#9a7431', emissiveIntensity: 0.4 }));
+  ring.rotation.x = Math.PI / 2; ring.position.y = -0.006; heroShowcaseScene.add(ring);
+}
+function resizeHeroShowcase() {
+  if (!heroShowcaseRenderer) return;
+  const stage = $('heroShowcaseCanvas').parentElement, width = Math.max(1, stage.clientWidth), height = Math.max(1, stage.clientHeight);
+  heroShowcaseRenderer.setSize(width, height, false);
+  heroShowcaseCamera.aspect = width / height;
+  heroShowcaseCamera.updateProjectionMatrix();
+}
+function clearHeroShowcaseModel() {
+  if (!heroShowcaseModel) return;
+  const root = heroShowcaseModel;
+  heroShowcaseScene.remove(root);
+  const belongs = item => { for (let p = item.mesh; p; p = p.parent) if (p === root) return true; return false; };
+  animated.spinners = animated.spinners.filter(item => !belongs(item));
+  animated.flags = animated.flags.filter(item => !belongs(item));
+  animated.smoke = animated.smoke.filter(item => !belongs(item));
+  clearGroup(root); heroShowcaseModel = null;
+}
+function showHeroShowcaseClass(index) {
+  const classes = Object.entries(HERO_CLASSES);
+  heroShowcaseIndex = (index + classes.length) % classes.length;
+  heroShowcaseSlideElapsed = 0;
+  clearHeroShowcaseModel();
+  const [id, def] = classes[heroShowcaseIndex];
+  heroShowcaseModel = heroModel({ id: -heroShowcaseIndex - 1, class: id, tier: 1 }, heroShowcaseIndex);
+  heroShowcaseModel.rotation.y = 0.3;
+  heroShowcaseScene.add(heroShowcaseModel);
+  $('heroShowcaseName').textContent = def.name;
+  $('heroShowcaseRole').textContent = HERO_SHOWCASE_ROLES[id] || 'REALM CHAMPION';
+  $('heroShowcaseTier').textContent = `Tier I · ${def.tiers[0]}`;
+  $('heroShowcaseDescription').textContent = def.desc;
+  $('heroShowcasePath').textContent = def.tiers.join(' → ');
+  $('heroShowcaseCount').textContent = `${heroShowcaseIndex + 1} / ${classes.length}`;
+  $('heroShowcaseDots').replaceChildren(...classes.map(([, hero], i) => {
+    const dot = document.createElement('span'); dot.classList.toggle('on', i === heroShowcaseIndex); dot.title = hero.name; return dot;
+  }));
+}
+function scheduleHeroShowcase(delay = HERO_SHOWCASE_IDLE_MS) {
+  clearTimeout(heroShowcaseIdleTimer); heroShowcaseIdleTimer = null;
+  if (started || heroShowcaseActive || $('splash').classList.contains('gone')) return;
+  heroShowcaseIdleTimer = setTimeout(() => {
+    heroShowcaseIdleTimer = null;
+    if (!started && !heroShowcaseActive && !$('splash').classList.contains('gone')) startHeroShowcase();
+  }, delay);
+}
+function startHeroShowcase() {
+  if (heroShowcaseActive || started) return false;
+  clearTimeout(heroShowcaseIdleTimer); heroShowcaseIdleTimer = null;
+  initHeroShowcase();
+  heroShowcaseActive = true;
+  $('heroShowcase').classList.remove('hidden');
+  resizeHeroShowcase(); showHeroShowcaseClass(0); refreshIcons($('heroShowcase'));
+  return true;
+}
+function stopHeroShowcase() {
+  heroShowcaseLastActivity = performance.now();
+  clearTimeout(heroShowcaseIdleTimer); heroShowcaseIdleTimer = null;
+  if (heroShowcaseActive) {
+    heroShowcaseActive = false;
+    $('heroShowcase').classList.add('hidden');
+    clearHeroShowcaseModel();
+  }
+  scheduleHeroShowcase();
+}
+function noteHeroShowcaseActivity() {
+  heroShowcaseLastActivity = performance.now();
+  if (heroShowcaseActive) stopHeroShowcase();
+  else scheduleHeroShowcase();
+}
+function bindHeroShowcase() {
+  for (const type of ['pointerdown', 'pointermove', 'wheel', 'touchstart', 'keydown']) {
+    document.addEventListener(type, noteHeroShowcaseActivity, { capture: true, passive: true });
+  }
+  window.addEventListener('resize', () => { if (heroShowcaseActive) resizeHeroShowcase(); });
+  $('btnCloseHeroShowcase').addEventListener('click', stopHeroShowcase);
+  scheduleHeroShowcase();
+}
+function updateHeroShowcase(dt) {
+  if (!heroShowcaseActive) return;
+  if (started) { stopHeroShowcase(); return; }
+  heroShowcaseSlideElapsed += dt * 1000;
+  if (heroShowcaseSlideElapsed >= HERO_SHOWCASE_SLIDE_MS) showHeroShowcaseClass(heroShowcaseIndex + 1);
+  if (heroShowcaseModel) heroShowcaseModel.rotation.y += dt * 0.55;
+  heroShowcaseRenderer.render(heroShowcaseScene, heroShowcaseCamera);
 }
 
 </script>
@@ -2807,7 +3375,7 @@ function bindStrategyUI() {
 'use strict';
 
 function rebuildWorld() {
-  buildTerrain();buildNature();buildRoads();buildBuildings();drawMinimap();
+  buildTerrain();buildNature();buildRoads();buildBuildings(true);drawMinimap();
   dirty.terrain=dirty.roads=dirty.buildings=dirty.nature=dirty.minimap=false;
 }
 let lastFrame=performance.now(),elapsed=0,lastMinimap=0;
@@ -2827,13 +3395,14 @@ function frame(now) {
   if(dirty.buildings)buildBuildings();
   updateCamera(dt);updateLighting(dt);updateModels(dt,elapsed);updateSky(dt);
   if(dirty.hud)updateHUD();
+  updateTutorial();
   if(dirty.minimap&&now-lastMinimap>180){drawMinimap();lastMinimap=now;}
   if(saveRequested&&started)saveGame(true);
-  processNotices();renderer.render(scene,camera);
+  processNotices();renderer.render(scene,camera);updateHeroShowcase(dt,now);
 }
 function boot() {
   document.body.classList.add('modal-open');
-  bindUI();bindWorldInput();buildSky();
+  bindUI();bindWorldInput();bindHeroShowcase();buildSky();
   let loaded=false;
   try{const raw=localStorage.getItem(SAVE_KEY);if(raw){restoreSave(JSON.parse(raw));loaded=true;}}catch(e){console.warn('Saved realm could not be restored:',e.message);}
   if(!loaded)foundRealm('Elderglen',32,18427,'standard');
